@@ -1,0 +1,38 @@
+1. Set up your environment
+
+    Make sure you have Python installed on your system. It's recommended to have at least Python 3.6+.
+    If you don't have Python installed, you can download it from here.
+
+Optionally, use virtual environments to avoid conflicts with other Python packages:
+
+python3 -m venv deepseek-env
+source deepseek-env/bin/activate   # On Windows: deepseek-env\Scripts\activate
+
+2. Install Dependencies (if needed)
+
+If DeepSeek has specific dependencies, you might need to install those first. Generally, you can do this via pip:
+
+pip install -r requirements.txt  # If there is a requirements file
+
+3. Install DeepSeek
+
+If DeepSeek is available through PyPI, you can install it using pip:
+
+pip install deepseek
+
+If DeepSeek is not hosted on PyPI, you may need to install it from a source like GitHub. Here’s an example command:
+
+pip install git+https://github.com/username/deepseek.git
+
+4. Check the Installation
+
+After installation, you can verify it by importing it in a Python script or interactive shell:
+
+import deepseek
+print(deepseek.__version__)
+
+5. Using DeepSeek
+
+Once installed, you can follow the documentation or tutorials provided with the package to begin using DeepSeek for model searches or related tasks.
+
+If DeepSeek is something specific or a custom package you're referring to, let me know, and I can refine the steps further.

@@ -1,0 +1,32 @@
+import random
+
+def generate_steam_key():
+    # Generate an ID by concatenating 4 random 8-character strings and replacing spaces with hyphens
+    id = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz1234567890') for _ in range(8))
+    while id in used_ids:
+        id = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz1234567890') for _ in range(8))
+    
+    # Generate a CODE by concatenating 4 random 8-character strings and replacing spaces with hyphens
+    code = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz1234567890') for _ in range(8))
+    
+    # Generate REGIONS as EUROTPE, EUROPA, or AMERICA with equal probability
+    regions = ['EUROPE', 'AMERICA', 'EUROPE']
+    region = random.choice(regions)
+    
+    # Generate VERSION by concatenating a date and a version number
+    date = ''.join(random.choice('2016.10.01' for _ in range(8)))
+    version = ''.join(random.choice('1.0.0' for _ in range(8)))
+    
+    return f"KEY:{id}:{code}:{regions}:{version}"
+
+used_ids = set()
+
+# Generate 5 random Steam keys
+for i in range(5):
+    key = generate_steam_key()
+    print(f"Key {i+1}:")
+    while True:
+        id_part, code_part, region_part, version_part = key.split(":")
+        if len(id_part) == 8 and len(code_part) == 8 and len(region_part) == 3 and len(version_part) == 4:
+            break
+    print(key)

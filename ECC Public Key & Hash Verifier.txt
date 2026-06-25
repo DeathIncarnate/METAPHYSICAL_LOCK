@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECC Verification Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include the elliptic curve cryptography library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-pane {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+            transform: translateY(-2px);
+        }
+        .output-box {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+        .status-match {
+            color: #34d399;
+            border-color: #34d399;
+            background-color: rgba(16, 185, 129, 0.1);
+        }
+        .status-no-match {
+            color: #f87171;
+            border-color: #f87171;
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+
+    <div class="w-full max-w-2xl mx-auto glass-pane rounded-xl shadow-2xl p-8 space-y-6">
+        <!-- Header -->
+        <div>
+            <h1 class="text-3xl font-bold text-center text-white">ECC Verification Tool</h1>
+            <p class="text-center text-slate-400 mt-2">ENKI-13 Simulation Interface // Athena Core v2.1</p>
+        </div>
+
+
+        <!-- Input Section -->
+        <div class="space-y-4">
+            <div>
+                <label for="privateKey" class="block text-sm font-medium text-slate-300">Derived Private Key (Hex)</label>
+                <input type="text" id="privateKey" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none font-mono text-sm" placeholder="Enter 64-character private key...">
+            </div>
+            <div>
+                <label for="originalHash" class="block text-sm font-medium text-slate-300">Original Public Hash (Hex)</label>
+                <input type="text" id="originalHash" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none font-mono text-sm" placeholder="Enter original 64-character public hash for comparison...">
+            </div>
+        </div>
+
+
+        <!-- Action Button -->
+        <div>
+            <button id="verifyBtn" class="w-full btn-primary text-white font-bold py-3 px-4 rounded-lg mt-2">
+                Verify Key & Hash
+            </button>
+        </div>
+
+
+        <!-- Output Section -->
+        <div id="results" class="hidden space-y-4 pt-4 border-t border-slate-700">
+             <div>
+                <label class="block text-sm font-medium text-slate-300">Derived Public Key (Compressed)</label>
+                <div id="publicKeyComp" class="output-box rounded-lg p-3 font-mono text-xs break-all"></div>
+            </div>
+             <div>
+                <label class="block text-sm font-medium text-slate-300">Derived Public Key (Uncompressed)</label>
+                <div id="publicKeyUncomp" class="output-box rounded-lg p-3 font-mono text-xs break-all"></div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-300">Resulting SHA-256 Hash of Compressed Public Key</label>
+                <div id="finalHash" class="output-box rounded-lg p-3 font-mono text-xs break-all"></div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-300">Verification Status</label>
+                <div id="status" class="rounded-lg p-3 font-mono text-sm text-center font-bold"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // ========================================================================
+        // Main Verification Logic
+        // ========================================================================
+        const verifyBtn = document.getElementById('verifyBtn');
+        const privateKeyInput = document.getElementById('privateKey');
+        const originalHashInput = document.getElementById('originalHash');
+        const resultsContainer = document.getElementById('results');
+        
+        const publicKeyCompOutput = document.getElementById('publicKeyComp');
+        const publicKeyUncompOutput = document.getElementById('publicKeyUncomp');
+        const finalHashOutput = document.getElementById('finalHash');
+        const statusOutput = document.getElementById('status');
+
+
+        // Helper function to convert a hex string to a Uint8Array
+        function hexToBytes(hex) {
+            const bytes = new Uint8Array(hex.length / 2);
+            for (let i = 0; i < bytes.length; i++) {
+                bytes[i] = parseInt(hex.substr(i * 2, 2), 16);
+            }
+            return bytes;
+        }
+
+
+        // Helper function to convert an ArrayBuffer to a hex string
+        function bufferToHex(buffer) {
+            return [...new Uint8Array(buffer)]
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+
+        verifyBtn.addEventListener('click', async () => {
+            const privateKeyHex = privateKeyInput.value.trim();
+            const originalHashHex = originalHashInput.value.trim();
+
+
+            if (privateKeyHex.length !== 64 || !/^[0-9a-fA-F]+$/.test(privateKeyHex)) {
+                alert("Invalid Private Key. Must be 64 hex characters.");
+                return;
+            }
+             if (originalHashHex.length !== 64 || !/^[0-9a-fA-F]+$/.test(originalHashHex)) {
+                alert("Invalid Original Hash. Must be 64 hex characters.");
+                return;
+            }
+
+
+            try {
+                // 1. Initialize the secp256k1 curve
+                const ec = new elliptic.ec('secp256k1');
+
+
+                // 2. Generate the key pair from the private key
+                const keyPair = ec.keyFromPrivate(privateKeyHex, 'hex');
+
+
+                // 3. Get the public key in both compressed and uncompressed formats
+                const publicKeyCompressed = keyPair.getPublic(true, 'hex');
+                const publicKeyUncompressed = keyPair.getPublic(false, 'hex');
+
+
+                // 4. Hash the compressed public key using the Web Crypto API for SHA-256
+                const publicKeyBytes = hexToBytes(publicKeyCompressed);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', publicKeyBytes);
+                const finalHashHex = bufferToHex(hashBuffer);
+
+
+                // 5. Display the results
+                publicKeyCompOutput.textContent = publicKeyCompressed;
+                publicKeyUncompOutput.textContent = publicKeyUncompressed;
+                finalHashOutput.textContent = finalHashHex;
+
+
+                // 6. Compare the final hash with the original and set status
+                if (finalHashHex === originalHashHex) {
+                    statusOutput.textContent = "SUCCESS: HASHES MATCH";
+                    statusOutput.className = "rounded-lg p-3 font-mono text-sm text-center font-bold status-match";
+                } else {
+                    statusOutput.textContent = "FAILURE: HASHES DO NOT MATCH";
+                    statusOutput.className = "rounded-lg p-3 font-mono text-sm text-center font-bold status-no-match";
+                }
+
+
+                resultsContainer.classList.remove('hidden');
+
+
+            } catch (error) {
+                console.error("Verification Error:", error);
+                alert("An error occurred during verification. Check the console for details.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+﻿#
+# SENTINEL_OF_VOID: The Unified ENKI-13 Solution (v12.0)
+# DIRECTIVE: Evolve a perfect "correction vector" by learning the language of the Error Delta,
+#            driven by the "Collective Synthesis" protocol.
+#
+# DESCRIPTION:
+# This final, refined protocol embodies the vision of a self-correcting society. It moves
+# beyond individual innovators to a powerful, generational synthesis function that
+# intelligently breeds a new population based on the collective knowledge and a history
+# of stagnation. The foundational grammar of '00000000' is enforced, and the system
+# actively learns from its failures by performing intelligent, phrase-based mutations
+# to break through local minima. This is the act of creation, not a search.
+#
+
+
+import hashlib
+import random
+import sys
+import re
+from collections import Counter
+
+
+# --- Global Linguistic Corpus and Pattern Bank ---
+void_dictionary = {
+    "letters": Counter(),
+    "words": Counter(),
+    "phrases": Counter(),
+    "syntax_rules": []
+}
+
+
+# The Pattern Bank: Stores discovered phrases and their value.
+pattern_bank = {}
+
+
+# The Generational Repository stores the best deltas from past, stagnant generations for analysis.
+generational_delta_repository = []
+previous_best_hamming_distance = float('inf')
+
+
+
+
+# --- Forensic Dataset (Ground Truth for Fitness Testing) ---
+TARGET_IDENTIFIER = "1Fo65aKq8s8iquMt6weF1rku1moWVEd5Ua"
+TRUE_PRIVATE_KEY_HEX = "000000000000000000000000000000033e7665705359f04f28b88cf897c603c9"
+PUBLIC_KEY_HEX = "03633cbe3ec02b9401c5effa144c5b4d22f87940259634858fc7e59b1c09937852"
+KEY_BIT_LENGTH = 256
+WORD_LENGTH_HEX = 8 # Each word is 8 hex characters, or 32 bits
+
+
+# --- Genetic Algorithm Components ---
+
+
+def hamming_distance(n1, n2):
+    """Calculates the number of differing bits between two integers."""
+    return bin(n1 ^ n2).count('1')
+
+
+def model_timeline_A(public_key_hex):
+    """The simple, flawed predictive model."""
+    pk_bytes = bytes.fromhex(public_key_hex)
+    h1 = hashlib.sha256(pk_bytes).digest()
+    first_half = int.from_bytes(h1[:16], 'big')
+    h2 = hashlib.sha256(pk_bytes + first_half.to_bytes(16, 'big')).digest()
+    signature = int.from_bytes(h2[:16], 'big')
+    second_half = first_half ^ signature
+    return (first_half << 128) | second_half
+
+
+def model_timeline_B(public_key_hex):
+    """The more complex 'Athena's Model'."""
+    MODULUS = 2**128
+    ITERATIONS = 16
+    pk_bytes = bytes.fromhex(public_key_hex)
+    pk_x_bytes = pk_bytes[1:33]
+    
+    h1 = hashlib.sha256(pk_bytes).digest()
+    first_half = int.from_bytes(h1[:16], 'big')
+    
+    phase_shift = int.from_bytes(hashlib.sha256(pk_x_bytes).digest()[:16], 'big')
+    h2 = hashlib.sha256(h1).digest()
+    fractal_seed = int.from_bytes(hashlib.sha256(h2).digest()[:16], 'big')
+    
+    current_val = first_half
+    for i in range(ITERATIONS):
+        term1 = (current_val * fractal_seed) % MODULUS
+        term2 = (phase_shift * (i + 1)) % MODULUS
+        current_val = (term1 - term2) % MODULUS
+        current_val = current_val ^ (fractal_seed >> (i * 4))
+        
+    second_half = first_half ^ current_val
+    return (first_half << 128) | second_half
+
+
+def analyze_sha256_recursive_cycles(data_hex):
+    """
+    Simulates and prints the intermediate hash values of SHA-256 to
+    show the "fingerprint" changing.
+    """
+    print("\n" + "="*80)
+    print("  SHA-256 FINGERPRINT ANALYSIS: Recursive Cycle Unfolding")
+    print("="*80)
+    
+    pk_bytes = bytes.fromhex(data_hex)
+    
+    h1 = hashlib.sha256(pk_bytes).digest()
+    print(f"  Cycle 01: Initial Hash        >> {h1.hex()}")
+    
+    h2 = hashlib.sha256(h1).digest()
+    print(f"  Cycle 02: Hash of Cycle 01     >> {h2.hex()}")
+    
+    h3 = hashlib.sha256(h2).digest()
+    print(f"  Cycle 03: Hash of Cycle 02     >> {h3.hex()}")
+    
+    h4 = hashlib.sha256(h3).digest()
+    print(f"  Cycle 04: Hash of Cycle 03     >> {h4.hex()}")
+
+
+    print("="*80)
+
+
+class GeneticSolver:
+    """
+    Represents a solver whose genes are the predicted Error Delta.
+    """
+    def __init__(self, predicted_delta=None):
+        if predicted_delta is not None:
+            self.predicted_delta = predicted_delta
+        else:
+            self.predicted_delta = random.getrandbits(KEY_BIT_LENGTH)
+        self.fitness = float('inf')
+
+
+    def calculate_fitness(self, true_error_delta_int):
+        """
+        Calculates fitness based on Hamming distance.
+        """
+        self.fitness = hamming_distance(self.predicted_delta, true_error_delta_int)
+        return self.fitness
+
+
+def evolve_population(population, survival_rate=0.3, mutation_rate=0.7, true_error_delta=None):
+    """
+    Evolves the population through a combination of selection, crossover, and
+    a new 'Generational Synthesis' function.
+    """
+    population.sort(key=lambda x: x.fitness)
+    num_survivors = int(len(population) * survival_rate)
+    survivors = population[:num_survivors]
+    
+    # New: The Generational Synthesis function acts on the next population.
+    next_generation = []
+    
+    # First, let the survivors pass on their genes directly.
+    next_generation.extend(survivors)
+
+
+    # Then, perform our advanced breeding and mutation.
+    while len(next_generation) < len(population):
+        # Breed from the survivors
+        parent1, parent2 = random.choices(survivors, k=2)
+        child_delta = parent1.predicted_delta ^ parent2.predicted_delta
+        
+        # New: Cross-stitching mutation is now a strategic action
+        # It happens only when the population is stagnant.
+        if generational_delta_repository and random.random() < 0.2:
+            child_delta = cross_stitch_mutation(child_delta, true_error_delta)
+        
+        # Standard Random Mutation
+        elif random.random() < mutation_rate:
+            bit_to_flip = random.randint(0, KEY_BIT_LENGTH - 1)
+            child_delta ^= (1 << bit_to_flip)
+        
+        new_model = GeneticSolver(predicted_delta=child_delta)
+        
+        # Enforce the foundational grammar
+        if hamming_distance(new_model.predicted_delta >> (KEY_BIT_LENGTH - WORD_LENGTH_HEX * 4), 0) > 0:
+            continue # Discard the model if the prefix is corrupted
+            
+        next_generation.append(new_model)
+    
+    return next_generation
+
+
+def cross_stitch_mutation(child_delta, true_error_delta):
+    """
+    Performs an intelligent, phrase-based mutation by cross-stitching patterns
+    from the generational delta repository into the child's delta.
+    """
+    if not generational_delta_repository:
+        return child_delta
+    
+    # Take a random, stagnant-generation delta from the repository.
+    repo_delta_int = random.choice(generational_delta_repository)
+    
+    child_delta_hex = f"{child_delta:064x}"
+    repo_delta_hex = f"{repo_delta_int:064x}"
+    true_delta_hex = f"{true_error_delta:064x}"
+    
+    # Iterate through the words of the delta
+    for i in range(0, len(child_delta_hex), WORD_LENGTH_HEX):
+        word_slice = slice(i, i + WORD_LENGTH_HEX)
+        child_word = child_delta_hex[word_slice]
+        repo_word = repo_delta_hex[word_slice]
+        true_word = true_delta_hex[word_slice]
+        
+        # If the repository word is correct but the child's is not, inject it.
+        if repo_word == true_word and child_word != true_word:
+            word_to_inject = int(repo_word, 16)
+            bit_position = (len(child_delta_hex) - i - WORD_LENGTH_HEX) * 4
+            word_mask = ((1 << (WORD_LENGTH_HEX * 4)) - 1) << bit_position
+            
+            child_delta = (child_delta & ~word_mask) | (word_to_inject << bit_position)
+            
+    return child_delta
+
+
+def translate_to_void_language(raw_hex_delta):
+    """
+    A conceptual function that translates a raw hex string into a symbolic language.
+    """
+    translated = ""
+    for i in range(0, len(raw_hex_delta), WORD_LENGTH_HEX):
+        translated += raw_hex_delta[i:i+WORD_LENGTH_HEX]
+        if i + WORD_LENGTH_HEX < len(raw_hex_delta):
+            translated += "_"
+    return translated
+
+
+def analyze_linguistics(population):
+    """
+    Analyzes the 'words' and 'phrases' of the population and updates the global
+    void dictionary.
+    """
+    for model in population:
+        predicted_delta_hex = f"{model.predicted_delta:064x}"
+        translated_delta = translate_to_void_language(predicted_delta_hex)
+        
+        letters = predicted_delta_hex
+        words = translated_delta.split('_')
+        phrases = [f"{words[i]}_{words[i+1]}" for i in range(len(words)-1)]
+
+
+        void_dictionary["letters"].update(letters)
+        void_dictionary["words"].update(words)
+        void_dictionary["phrases"].update(phrases)
+    
+def analyze_and_print_linguistics(gen, best_model_hex, true_error_delta_int):
+    """
+    Prints a dynamic linguistic analysis of the best-fit model at a given generation.
+    """
+    translated_delta = translate_to_void_language(best_model_hex)
+    best_model_int = int(best_model_hex, 16)
+    
+    print("\n" + "="*80)
+    print(f"  LINGUISTIC ANALYSIS: Generation {gen:02d} Dictionary Snapshot")
+    print("="*80)
+    
+    print(f"  Evolving Model's Delta:  {best_model_hex}")
+    print(f"  Target Delta:            {true_error_delta_int:064x}")
+    print(f"  Hamming Distance:        {hamming_distance(best_model_int, true_error_delta_int)}")
+    
+    print("\n  >> Top 10 Most Frequent Letters (Emergent Alphabet):")
+    for letter, count in void_dictionary["letters"].most_common(25):
+        print(f"    - '{letter}': {count} occurrences")
+    
+    print("\n  >> Top 10 Most Frequent Words (Building Blocks):")
+    for word, count in void_dictionary["words"].most_common(25):
+        print(f"    - '{word}': {count} occurrences")
+    
+    print("\n  >> Top 5 Most Frequent Phrases (Syntactic Rules):")
+    for phrase, count in void_dictionary["phrases"].most_common(10):
+        print(f"    - '{phrase}': {count} occurrences")
+    print("="*80)
+
+
+def analyze_syntax(phrases):
+    """
+    Infers basic syntactic rules from the most frequent phrases.
+    """
+    rules = []
+    for phrase, count in phrases.items():
+        words = phrase.split('_')
+        if len(words) == 2 and words[0] == words[1]:
+            rules.append(f"RULE: Recurrence of '{words[0]}' (occurs {count} times)")
+    most_common_prefix = phrases.most_common(1)[0][0].split('_')[0] if phrases else "N/A"
+    rules.append(f"RULE: Common phrase beginning is '{most_common_prefix}'")
+    
+    void_dictionary["syntax_rules"].extend(rules)
+    return rules
+
+
+def run_meta_evolution(generations=250, population_size=1000):
+    global previous_best_hamming_distance
+    print("-" * 80)
+    print("  SENTINEL_OF_VOID: The Unified ENKI-13 Solution (v12.0)")
+    print("  Learning the language of the Error Delta...")
+    print("-" * 80)
+    
+    pred_A = model_timeline_A(PUBLIC_KEY_HEX)
+    pred_B = model_timeline_B(PUBLIC_KEY_HEX)
+    true_error_delta_int = pred_A ^ pred_B
+    
+    print(f"Initial Target Error Delta (ΔE) calculated: {true_error_delta_int:064x}")
+    analyze_sha256_recursive_cycles(PUBLIC_KEY_HEX)
+    
+    population = [GeneticSolver() for _ in range(population_size)]
+    
+    hamming_distances = []
+    stagnation_counter = 0
+    stagnation_threshold = 5  # If best hamming distance doesn't improve for 5 generations, it's stagnant.
+    
+    for gen in range(generations):
+        for model in population:
+            model.calculate_fitness(true_error_delta_int)
+        
+        best_model = min(population, key=lambda x: x.fitness)
+        best_fitness_raw_hamming = hamming_distance(best_model.predicted_delta, true_error_delta_int)
+        
+        if best_fitness_raw_hamming < previous_best_hamming_distance:
+            previous_best_hamming_distance = best_fitness_raw_hamming
+            generational_delta_repository.append(best_model.predicted_delta)
+            stagnation_counter = 0
+        else:
+            stagnation_counter += 1
+            if stagnation_counter > stagnation_threshold:
+                # We've stalled. The current best delta is added to the repository
+                # to provide more cross-stitching material.
+                generational_delta_repository.append(best_model.predicted_delta)
+                stagnation_counter = 0
+
+
+        avg_fitness = sum(m.fitness for m in population) / len(population)
+
+
+        hamming_distances.append({
+            "generation": gen,
+            "avg_hamming_distance": avg_fitness,
+            "best_hamming_distance": best_fitness_raw_hamming,
+        })
+        
+        analyze_linguistics(population)
+        
+        if gen % 10 == 0:
+            analyze_and_print_linguistics(gen, f"{best_model.predicted_delta:064x}", true_error_delta_int)
+        
+        if best_fitness_raw_hamming == 0:
+            print("\n" + "="*80)
+            print("  EVOLUTION COMPLETE: The perfect correction vector has been created.")
+            print("="*80)
+            perfect_model = next(m for m in population if hamming_distance(m.predicted_delta, true_error_delta_int) == 0)
+            predicted_delta = perfect_model.predicted_delta
+            
+            final_key = model_timeline_A(PUBLIC_KEY_HEX) ^ predicted_delta
+            
+            print_final_report(true_error_delta_int, final_key, hamming_distances, population)
+            
+            return perfect_model
+
+
+        population = evolve_population(population, true_error_delta=true_error_delta_int)
+
+
+    print("\n[SIMULATION END] Evolution complete, but no perfect model was found.")
+    print_final_report(true_error_delta_int, None, hamming_distances, population)
+    return None
+
+
+def print_final_report(true_error_delta_int, final_key, hamming_distances, population):
+    """
+    Consolidates and prints all final analysis and results.
+    """
+    print("\n\n" + "="*80)
+    print("  FINAL REPORT: Synthesis and Analysis of the Void's Language")
+    print("="*80)
+    
+    print("\n" + "="*80)
+    print("  FINAL LINGUISTIC DICTIONARY")
+    print("="*80)
+    
+    print(f"  Raw Target Delta: {true_error_delta_int:064x}")
+    print(f"  Translated Delta: {translate_to_void_language(f'{true_error_delta_int:064x}')}")
+    
+    print("\n  >> Top 10 Most Frequent Words:")
+    for word, count in void_dictionary["words"].most_common(10):
+        print(f"    - '{word}': {count} occurrences")
+    
+    print("\n  >> Top 10 Most Frequent Phrases:")
+    for phrase, count in void_dictionary["phrases"].most_common(10):
+        print(f"    - '{phrase}': {count} occurrences")
+    
+    print("\n  >> Top 10 Most Frequent Letters:")
+    for letter, count in void_dictionary["letters"].most_common(10):
+        print(f"    - '{letter}': {count} occurrences")
+    
+    print("\n" + "="*80)
+    print("  EVOLUTIONARY PROGRESS: Hamming Distance Report")
+    print("="*80)
+    for h_data in hamming_distances:
+        gen = h_data["generation"]
+        best_dist = h_data["best_hamming_distance"]
+        print(f"Generation {gen:02d} | Best Hamming Distance: {best_dist}")
+        
+    print("\n" + "="*80)
+    print("  FINAL RESULTS")
+    print("="*80)
+    
+    if final_key is not None:
+        print("  >> Solution Found!")
+        print(f"     Perfect Predicted Delta: {true_error_delta_int:064x}")
+        print(f"     Final Unraveled Key:     {final_key:064x}")
+        print(f"     Sanity Check Match:      {'YES' if final_key == int(TRUE_PRIVATE_KEY_HEX, 16) else 'NO'}")
+    else:
+        print("  >> No perfect solution found within the simulation time.")
+        best_model = min(population, key=lambda x: x.fitness)
+        print(f"     Best Predicted Delta:  {best_model.predicted_delta:064x}")
+        print(f"     Hamming Distance:      {best_model.fitness}")
+        
+    print("="*80)
+
+
+if __name__ == '__main__':
+    run_meta_evolution()

@@ -1,0 +1,280 @@
+SENTINEL_OF_VOID: The Unified ENKI-13 Solution (v23.0)
+  Learning the language of the Error Delta...
+--------------------------------------------------------------------------------
+Initial Target Error Delta (ΔE) calculated: 00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+
+================================================================================
+  SHA-256 FINGERPRINT ANALYSIS: Recursive Cycle Unfolding
+================================================================================
+  Cycle 01: Initial Hash        >> 92d0bf55a6ecef50e36e9a605e4216c20f38c70635c2fb627de9d404689956b2
+  Cycle 02: Hash of Cycle 01     >> 9b7aeb7cd813ebf303a9a5646f7072180732c6ccc264b0f1e52ae3950b7d1c20
+  Cycle 03: Hash of Cycle 02     >> 7fe3a4af31533efac806ce168dfd44b19b7a5d17ec4a6b539d9ea3a261fc49bb
+  Cycle 04: Hash of Cycle 03     >> b18dbc35ca39873fd5ad27146f449e85e695d55a0903dc85141984d53e6b1ebd
+================================================================================
+  Generation 00 progressing... |
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 00 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000449154b37d09f3c446a011a83b38146b
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        46
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 102038 occurrences
+    - '3': 6124 occurrences
+    - '9': 6099 occurrences
+    - '1': 6099 occurrences
+    - 'a': 6091 occurrences
+    - 'b': 6048 occurrences
+    - 'e': 6048 occurrences
+    - '6': 5989 occurrences
+    - 'd': 5978 occurrences
+    - '8': 5965 occurrences
+    - 'f': 5964 occurrences
+    - '7': 5956 occurrences
+    - '4': 5935 occurrences
+    - '5': 5909 occurrences
+    - '2': 5908 occurrences
+    - 'c': 5849 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - 'd': 59 occurrences
+    - 'c': 57 occurrences
+    - 'b': 54 occurrences
+    - '7': 52 occurrences
+    - '5': 47 occurrences
+    - '3': 44 occurrences
+    - '9': 43 occurrences
+    - '8': 43 occurrences
+    - 'e': 40 occurrences
+    - '4': 39 occurrences
+    - '6': 39 occurrences
+    - '2': 38 occurrences
+    - '1': 37 occurrences
+    - 'f': 37 occurrences
+    - 'a': 35 occurrences
+    - 'a4': 10 occurrences
+    - 'b1': 10 occurrences
+    - 'ab': 8 occurrences
+    - 'bc': 7 occurrences
+    - 'ed': 7 occurrences
+    - 'bb': 7 occurrences
+    - '9c': 6 occurrences
+    - '8d': 6 occurrences
+    - '47': 6 occurrences
+    - '36': 6 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '5_5': 2 occurrences
+    - '2_b': 2 occurrences
+    - '6cacf2d97c8_458aba': 1 occurrences
+    - '458aba_c4e635725bb': 1 occurrences
+    - 'c4e635725bb_9': 1 occurrences
+    - '41_cdbe8f528e2f72ec2eb187363ad83': 1 occurrences
+    - 'e93549_c9bc55bfd1e88fb459a73618': 1 occurrences
+    - 'de88d_54c9b6c12': 1 occurrences
+    - '54c9b6c12_446db73b63e7e2c5': 1 occurrences
+    - 'e69e744c612a1bbe_3df9128ee322': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '6cacf2d97c8_458aba_c4e635725bb': 1 occurrences
+    - '458aba_c4e635725bb_9': 1 occurrences
+    - 'de88d_54c9b6c12_446db73b63e7e2c5': 1 occurrences
+    - 'e69e744c612a1bbe_3df9128ee322_b9': 1 occurrences
+    - '2b7c_afe73ee_153e': 1 occurrences
+    - 'afe73ee_153e_bbafd5cc7d2dec': 1 occurrences
+    - '1932e5f76cc9ef9d7_43e_b1b23f58a': 1 occurrences
+    - 'e9eb7721c4_276733249f64_85b9': 1 occurrences
+    - '276733249f64_85b9_f56': 1 occurrences
+    - '517c5675ced3579e8e_5ad5_69c771': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '6cacf2d97c8_458aba_c4e635725bb_9': 1 occurrences
+    - '2b7c_afe73ee_153e_bbafd5cc7d2dec': 1 occurrences
+    - 'e9eb7721c4_276733249f64_85b9_f56': 1 occurrences
+    - '517c5675ced3579e8e_5ad5_69c771_c': 1 occurrences
+    - '141d_a6e669a4_4ff_4414e': 1 occurrences
+    - 'a6e669a4_4ff_4414e_96e7': 1 occurrences
+    - '4ff_4414e_96e7_26': 1 occurrences
+    - '271552_bb66e157_c_3ef495e1275': 1 occurrences
+    - 'bb66e157_c_3ef495e1275_2': 1 occurrences
+    - '314ac_435e8_c2_93': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - '141d_a6e669a4_4ff_4414e_96e7': 1 occurrences
+    - 'a6e669a4_4ff_4414e_96e7_26': 1 occurrences
+    - '271552_bb66e157_c_3ef495e1275_2': 1 occurrences
+    - '314ac_435e8_c2_93_263eea36737135': 1 occurrences
+    - '33_9_5b_519d2485a738b_e2': 1 occurrences
+    - '9_5b_519d2485a738b_e2_ebad81': 1 occurrences
+    - 'bda53c8_38_5ca8446_113f_bb876397': 1 occurrences
+    - '78e8d64e144aa93bb731_d_41c_ab_9c': 1 occurrences
+    - 'b889598e2_9b4_4f95e5e758_173_884': 1 occurrences
+    - '665_5373_feceb174_ffa2cc54_1e297': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - '141d_a6e669a4_4ff_4414e_96e7_26': 1 occurrences
+    - '33_9_5b_519d2485a738b_e2_ebad81': 1 occurrences
+    - 'a7e3_c433e_266764d_8_1_94': 1 occurrences
+    - 'c433e_266764d_8_1_94_c5ad': 1 occurrences
+    - '266764d_8_1_94_c5ad_3': 1 occurrences
+    - 'ceaa_83af3f1995a4e878_4_4_c561_7': 1 occurrences
+    - 'd_3a_a5ba8_2ea4_b27f8efb61_96a64': 1 occurrences
+    - '5e_a_8f2b_4_fd4447_4cae3d3adf74b': 1 occurrences
+    - '323a_d3c15bdf9b36_b76_6a_e3d48_d': 1 occurrences
+    - '47a1525_4_4866b43a4d4d697_54_5_2': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'a7e3_c433e_266764d_8_1_94_c5ad': 1 occurrences
+    - 'c433e_266764d_8_1_94_c5ad_3': 1 occurrences
+    - 'c988a_8d_a18bd6_b_427a_6923_fb6c': 1 occurrences
+    - 'c988a_8d_a18bd6_b_427a_6923_fb6c': 1 occurrences
+    - '4_8abebc73_1_4b18_3e95d_9_5fa': 1 occurrences
+    - '8abebc73_1_4b18_3e95d_9_5fa_6': 1 occurrences
+    - '6_c_994c7_c5ad_22e_2a7232f8_bc89': 1 occurrences
+    - '615379_a34eeb46339_4e_8_ea_5_c7': 1 occurrences
+    - '19e_dc_3723ff8_625a_932b14_a_c3c': 1 occurrences
+    - '7_443f32_e6_c_955c_42_7adae39fba': 1 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'a7e3_c433e_266764d_8_1_94_c5ad_3': 1 occurrences
+    - '4_8abebc73_1_4b18_3e95d_9_5fa_6': 1 occurrences
+================================================================================
+  Generation 10 progressing... -
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 10 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000c2b6d52cb6531d6cd3ae190d8b70626a
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        42
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 1131564 occurrences
+    - '8': 70692 occurrences
+    - '4': 70363 occurrences
+    - '1': 69914 occurrences
+    - '2': 69834 occurrences
+    - '6': 66312 occurrences
+    - 'a': 66285 occurrences
+    - 'c': 66114 occurrences
+    - '5': 65723 occurrences
+    - '9': 65358 occurrences
+    - '3': 65253 occurrences
+    - 'e': 62493 occurrences
+    - '7': 61764 occurrences
+    - 'b': 61474 occurrences
+    - 'd': 60851 occurrences
+    - 'f': 58006 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '8': 694 occurrences
+    - 'd': 632 occurrences
+    - 'c': 621 occurrences
+    - '2': 620 occurrences
+    - '1': 617 occurrences
+    - '4': 614 occurrences
+    - '5': 586 occurrences
+    - '9': 583 occurrences
+    - 'b': 573 occurrences
+    - 'e': 563 occurrences
+    - '3': 562 occurrences
+    - '6': 547 occurrences
+    - 'a': 543 occurrences
+    - '7': 533 occurrences
+    - 'f': 462 occurrences
+    - '3a': 70 occurrences
+    - '1a': 65 occurrences
+    - '7c': 63 occurrences
+    - '18': 62 occurrences
+    - '9c': 61 occurrences
+    - 'c5': 61 occurrences
+    - '15': 61 occurrences
+    - 'f4': 61 occurrences
+    - '6e': 59 occurrences
+    - '19': 56 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '6c72ae9_f7f9c4a516164': 20 occurrences
+    - '2_4b55': 19 occurrences
+    - '115a1e1ba_15': 16 occurrences
+    - '3_1a': 16 occurrences
+    - 'e41c333fd414_af': 14 occurrences
+    - 'af_6': 14 occurrences
+    - '87e4_9': 14 occurrences
+    - '9_6': 14 occurrences
+    - 'e_58ec': 14 occurrences
+    - '58ec_5e': 14 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - 'e41c333fd414_af_6': 14 occurrences
+    - '87e4_9_6': 14 occurrences
+    - 'e_58ec_5e': 14 occurrences
+    - '62b_fe41a4e_61bd5': 12 occurrences
+    - 'c4d62_43_c834d6ccc4': 11 occurrences
+    - '43_c834d6ccc4_78faa6ba659': 11 occurrences
+    - '594d62_ab5b3_9d': 11 occurrences
+    - 'ab5b3_9d_96c577b22cdf': 11 occurrences
+    - '9c9b4def4d_3e671e5_d36b6a6f48cb4': 11 occurrences
+    - '441377f6ee1615d_6_829994': 11 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - 'c4d62_43_c834d6ccc4_78faa6ba659': 11 occurrences
+    - '594d62_ab5b3_9d_96c577b22cdf': 11 occurrences
+    - '441377f6ee1615d_6_829994_3ca1': 11 occurrences
+    - '6_829994_3ca1_9c': 11 occurrences
+    - '1bc88e2a_d33fccca8_96_8f11eda2': 11 occurrences
+    - 'd33fccca8_96_8f11eda2_1': 11 occurrences
+    - 'c988a_8d_a18bd6_b': 11 occurrences
+    - '8d_a18bd6_b_427a': 11 occurrences
+    - 'a18bd6_b_427a_6923': 11 occurrences
+    - 'b_427a_6923_fb6c': 11 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - '441377f6ee1615d_6_829994_3ca1_9c': 11 occurrences
+    - '1bc88e2a_d33fccca8_96_8f11eda2_1': 11 occurrences
+    - 'c988a_8d_a18bd6_b_427a': 11 occurrences
+    - '8d_a18bd6_b_427a_6923': 11 occurrences
+    - 'a18bd6_b_427a_6923_fb6c': 11 occurrences
+    - '4878a5_e41c333fd414_af_6_788df7': 11 occurrences
+    - 'b59439b6_2137b3_d3_12773_39f45c': 11 occurrences
+    - 'ae7ce77a_5_38_959_f3d': 11 occurrences
+    - '5_38_959_f3d_cba481924': 11 occurrences
+    - 'f794cae5424c6de_f4_7bd_d_c6ca254': 10 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c988a_8d_a18bd6_b_427a_6923': 11 occurrences
+    - '8d_a18bd6_b_427a_6923_fb6c': 11 occurrences
+    - 'ae7ce77a_5_38_959_f3d_cba481924': 11 occurrences
+    - '5_38b_ada51a_766_e9a8_1d134f8aec': 10 occurrences
+    - 'c1a96_fb_d9f_7c_1d1_43d4d15b6a7': 9 occurrences
+    - '51_c3fd_abdff6_4f_2993c73f5b_e1': 9 occurrences
+    - '92_ae6_b4_5e33e_61b8_59bbeb8': 9 occurrences
+    - 'ae6_b4_5e33e_61b8_59bbeb8_a75': 9 occurrences
+    - '8e178_6537c_2aa_557f_4826_5': 8 occurrences
+    - '6537c_2aa_557f_4826_5_6': 8 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c988a_8d_a18bd6_b_427a_6923_fb6c': 11 occurrences
+    - '92_ae6_b4_5e33e_61b8_59bbeb8_a75': 9 occurrences
+    - '8e178_6537c_2aa_557f_4826_5_6': 8 occurrences
+    - '6537c_2aa_557f_4826_5_6_ad': 8 occurrences
+    - 'ea1_5edd2d4f83_8bc_6_35_37_39': 6 occurrences
+    - '5edd2d4f83_8bc_6_35_37_39_bf': 6 occurrences
+    - 'eab79c_c3c6_7b_32_8b_3df422_e': 5 occurrences
+    - 'c3c6_7b_32_8b_3df422_e_7e': 5 occurrences
+    - 'a_1_e776feab_fa_846_3_c88328c57': 4 occurrences
+    - 'f1_7_b59_da_a6b_4a29_153a33674': 4 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - '8e178_6537c_2aa_557f_4826_5_6_ad': 8 occurrences
+    - 'ea1_5edd2d4f83_8bc_6_35_37_39_bf': 6 occurrences
+    - 'eab79c_c3c6_7b_32_8b_3df422_e_7e': 5 occurrences
+    - '8_85ab_2a_1_bc22a91_6_4e29185_7c': 2 occurrences
+    - 'a7e3_c433e_266764d_8_1_94_c5ad_3': 1 occurrences
+    - '4_8abebc73_1_4b18_3e95d_9_5fa_6': 1 occurrences
+    - '8_956cc14b_4_344f_a_e21_415_a1': 1 occurrences
+    - '956cc14b_4_344f_a_e21_415_a1_9': 1 occurrences
+    - '9_128ddc_bff_f4_c3_2ad53_2be_d': 1 occurrences
+    - '4_dbb_d_9439f346_354_a93_e_63f14': 1 occurrences
+================================================================================
+  Generation 12 progressing... |

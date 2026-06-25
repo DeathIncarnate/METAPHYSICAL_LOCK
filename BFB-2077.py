@@ -13,6 +13,46 @@ import sys
 import time
 import threading
 from collections import Counter, deque
+import curses, math, time
+from ecdsa import SECP256k1, SigningKey
+import itertools
+
+# ====== Report Color Helpers ======
+def colorize_byte(pred_b: int, target_b: int) -> str:
+    matches = 8 - bin(pred_b ^ target_b).count("1")
+    if matches == 8:
+        color = curses.color_pair(1)  # LightBlue
+    elif matches >= 6:
+        color = curses.color_pair(2)  # Green
+    elif matches >= 3:
+        color = curses.color_pair(3)  # Yellow
+    elif matches >= 1:
+        color = curses.color_pair(5)  # Orange
+    else:
+        color = curses.color_pair(4)  # Pink
+    return color
+
+# ANSI version for normal printouts (outside curses)
+RESET     = "\033[0m"
+LIGHTBLUE = "\033[94m"
+GREEN     = "\033[92m"
+YELLOW    = "\033[93m"
+ORANGE    = "\033[38;5;208m"
+PINK      = "\033[95m"
+
+def ansi_colorize_byte(pred_b: int, target_b: int) -> str:
+    matches = 8 - bin(pred_b ^ target_b).count("1")
+    if matches == 8:
+        color = LIGHTBLUE
+    elif matches >= 6:
+        color = GREEN
+    elif matches >= 3:
+        color = YELLOW
+    elif matches >= 1:
+        color = ORANGE
+    else:
+        color = PINK
+    return color
 
 # ============================== CONFIG =======================================
 
@@ -26,7 +66,7 @@ STAGNATION_THRESHOLD  = 5                # gens without best improvement ⇒ add
 PENALTY_FOR_ZERO_WORD = 100              # penalize '00000000' in suffix
 REPORT_INTERVAL       = 50               # gens between buffered snapshots
 TOP_PHRASES_LEN       = 5                # visualize this phrase length bucket (2..5 recommended)
-BRAID_STRANDS         = 20                # # of strands displayed (top-N phrases)
+BRAID_STRANDS         = 50                # # of strands displayed (top-N phrases)
 
 FOUNDATIONAL_PREFIX_HEX         = "00000000000000000000000000000000"
 KEY_BIT_LENGTH                  = 256
@@ -39,7 +79,205 @@ TARGET_DATA = {
     # You may replace with your public key hex (02/03 compressed or 04 uncompressed)
     "pubkey_hex": "035cd1854cae45391ca4ec428cc7e6c7d9984424b954209a8eea197b9e364c05f6"
 }
+# ====== SECP256K1 CONSTANTS ======
+CURVE_ORDER = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
+FIELD_MODULUS = 2**256 - 2**32 - 977
 
+# ====== MASTER ALGORITHM INTEGRATION ======
+
+def private_key_to_public_key(privkey):
+    """Convert private key to compressed public key using proper EC math"""
+    try:
+        sk = SigningKey.from_secret_exponent(privkey, curve=SECP256k1)
+        vk = sk.get_verifying_key()
+        return vk.to_string("compressed").hex()
+    except Exception as e:
+        return None
+
+def pubkeys_match(generated_hex, target_hex):
+    """Check if two public keys match"""
+    def normalize_pubkey(hex_str):
+        if len(hex_str) == 130 and hex_str.startswith('04'):
+            x = hex_str[2:66]
+            y = hex_str[66:130]
+            prefix = '02' if int(y[-1], 16) % 2 == 0 else '03'
+            return prefix + x
+        return hex_str
+    return normalize_pubkey(generated_hex) == normalize_pubkey(target_hex)
+
+def validate_private_key(candidate_privkey, target_pubkey_hex, curve_order):
+    """Validate if candidate private key produces target public key"""
+    if candidate_privkey <= 0 or candidate_privkey >= curve_order:
+        return False
+    generated_pubkey = private_key_to_public_key(candidate_privkey)
+    return generated_pubkey and pubkeys_match(generated_pubkey, target_pubkey_hex)
+
+# ====== MASTER ALGORITHM STRATEGIES ======
+
+def attempt_phrase_reconstruction(void_engine, curve_order):
+    """Strategy 1: Direct phrase reconstruction"""
+    try:
+        top_phrases = []
+        for L in [2, 3, 4, 5]:
+            key = f"phrases_{L}"
+            if hasattr(void_engine, 'cumulative') and key in void_engine.cumulative and void_engine.cumulative[key]:
+                top_phrases.extend(void_engine.cumulative[key].most_common(3))
+        
+        if not top_phrases:
+            return None
+        
+        for phrase, frequency in top_phrases:
+            segments = phrase.split('_')
+            hex_string = ''.join(segments)
+            
+            if len(hex_string) < 16:
+                hex_string = (hex_string * (64 // len(hex_string) + 1))[:64]
+            else:
+                hex_string = hex_string[:64]
+            
+            try:
+                candidate = int(hex_string, 16) % curve_order
+                if candidate != 0:
+                    return candidate
+            except ValueError:
+                continue
+        return None
+    except:
+        return None
+
+def attempt_modular_relationships(void_engine, field_modulus, curve_order):
+    """Strategy 2: Modular arithmetic relationships"""
+    try:
+        if not hasattr(void_engine, 'proven_mutations') or len(void_engine.proven_mutations) < 2:
+            return None
+        
+        key = "phrases_3"
+        if not hasattr(void_engine, 'cumulative') or key not in void_engine.cumulative or not void_engine.cumulative[key]:
+            return None
+        
+        top_phrase, freq = void_engine.cumulative[key].most_common(1)[0]
+        segments = top_phrase.split('_')
+        seed_value = sum(int(seg, 16) for seg in segments if seg) % field_modulus
+        
+        proven_values = list(void_engine.proven_mutations)
+        for proven in proven_values[:5]:
+            relationships = [
+                (proven * seed_value) % curve_order,
+                (proven + seed_value) % curve_order,
+                (proven ^ seed_value) % curve_order,
+            ]
+            for candidate in relationships:
+                if 0 < candidate < curve_order:
+                    return candidate
+        return None
+    except:
+        return None
+
+def attempt_ca_guided_search(void_engine, curve_order):
+    """Strategy 3: CA-guided private key search"""
+    try:
+        key = "phrases_4"
+        if not hasattr(void_engine, 'cumulative') or key not in void_engine.cumulative or not void_engine.cumulative[key]:
+            return None
+        
+        top_phrase, freq = void_engine.cumulative[key].most_common(1)[0]
+        segments = top_phrase.split('_')
+        ca_rules = []
+        
+        for seg in segments:
+            try:
+                rule = int(seg, 16) % 256
+                ca_rules.append(rule)
+            except:
+                continue
+        
+        if not ca_rules:
+            return None
+        
+        # CA simulation for private key generation
+        initial_state = sum(int(seg, 16) for seg in segments if seg) & ((1 << 256) - 1)
+        current_state = initial_state
+        
+        for step in range(256):
+            rule = ca_rules[step % len(ca_rules)]
+            new_state = 0
+            for bit_pos in range(256):
+                left = (current_state >> ((bit_pos - 1) % 256)) & 1
+                center = (current_state >> bit_pos) & 1
+                right = (current_state >> ((bit_pos + 1) % 256)) & 1
+                neighborhood = (left << 2) | (center << 1) | right
+                new_bit = (rule >> neighborhood) & 1
+                new_state |= (new_bit << bit_pos)
+            current_state = new_state
+        
+        return current_state % curve_order
+    except:
+        return None
+
+def attempt_multi_phrase_combinatorics(void_engine, curve_order):
+    """Strategy 4: Multi-phrase combinatorial approach"""
+    try:
+        phrases_by_length = {}
+        for L in [2, 3, 4, 5]:
+            key = f"phrases_{L}"
+            if hasattr(void_engine, 'cumulative') and key in void_engine.cumulative and void_engine.cumulative[key]:
+                phrases_by_length[L] = [p for p, _ in void_engine.cumulative[key].most_common(2)]
+        
+        if len(phrases_by_length) < 2:
+            return None
+        
+        phrase_values = {}
+        for L, phrases in phrases_by_length.items():
+            for phrase in phrases:
+                segments = phrase.split('_')
+                hex_str = ''.join(segments)
+                if hex_str:
+                    try:
+                        value = int(hex_str, 16)
+                        phrase_values[phrase] = value
+                    except:
+                        continue
+        
+        if len(phrase_values) < 2:
+            return None
+        
+        values = list(phrase_values.values())
+        combinations = [
+            (values[0] * values[1]) % curve_order,
+            (values[0] + values[1]) % curve_order,
+            (values[0] ^ values[1]) % curve_order,
+        ]
+        
+        for candidate in combinations:
+            if candidate and 0 < candidate < curve_order:
+                return candidate
+        return None
+    except:
+        return None
+
+def void_dict_to_private_key(void_engine, target_pubkey_hex, max_attempts=1000):
+    """MASTER ALGORITHM: Convert Void Dictionary patterns to private key"""
+    attempts = 0
+    
+    while attempts < max_attempts:
+        attempts += 1
+        
+        # Try all strategies
+        strategies = [
+            attempt_phrase_reconstruction(void_engine, CURVE_ORDER),
+            attempt_modular_relationships(void_engine, FIELD_MODULUS, CURVE_ORDER),
+            attempt_ca_guided_search(void_engine, CURVE_ORDER),
+            attempt_multi_phrase_combinatorics(void_engine, CURVE_ORDER),
+        ]
+        
+        for candidate in strategies:
+            if candidate and validate_private_key(candidate, target_pubkey_hex, CURVE_ORDER):
+                return candidate
+        
+        # Small random delay to prevent tight looping
+        time.sleep(0.001)
+    
+    return None
 # ============================== LOG BUFFER ===================================
 
 _report_log = deque()
@@ -289,6 +527,28 @@ def display_report(generation, population, target_delta, k_predicted, analyzer, 
     logln(f"  Best Individual Fitness (Hamming): {best.fitness}")
     logln(f"  Target V_error: {target_delta:064x}")
     logln(f"  Best V_error:   {best.predicted_delta:064x}")
+        # --- Colored Byte Report ---
+    best_bytes   = best.predicted_delta.to_bytes(32, 'big')
+    target_bytes = target_delta.to_bytes(32, 'big')
+    colored_line = []
+    for pb, tb in zip(best_bytes, target_bytes):
+        col = ansi_colorize_byte(pb, tb)
+        colored_line.append(f"{col}{pb:02x}{RESET}")
+    print("\n--- Colored Byte Report ---")
+    print(" ".join(colored_line))
+
+    # --- Colored Bit Report ---
+    pred_bits   = f"{best.predicted_delta:0256b}"
+    target_bits = f"{target_delta:0256b}"
+    bit_line = []
+    for b_pred, b_true in zip(pred_bits, target_bits):
+        if b_pred == b_true:
+            bit_line.append(f"{LIGHTBLUE}{b_pred}{RESET}")
+        else:
+            bit_line.append(f"{PINK}{b_pred}{RESET}")
+    print("\n--- Colored Bit Report ---")
+    print("".join(bit_line))
+
     logln("="*80)
 
     logln("\n--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---")
@@ -342,9 +602,10 @@ class SharedState:
         self.generation = 0
         self.best_hd = None
         self.target_hex = ""
-        self.strands = []  # list of (phrase, count)
+        self.strands = []
         self.running = True
         self.converged = False
+        self.private_key = None  # NEW: Store discovered private key
 
     def update(self, generation, best_hd, target_int, phrases):
         with self.lock:
@@ -356,12 +617,20 @@ class SharedState:
 # ============================== CURSES VISUAL =================================
 
 def _visual_loop_curses(stdscr, shared: SharedState):
-    import curses, math
     curses.curs_set(0)
     stdscr.nodelay(True)
-    frame = 0
+    curses.start_color()
+    curses.use_default_colors()
 
+    curses.init_pair(1, curses.COLOR_CYAN, -1)
+    curses.init_pair(2, curses.COLOR_GREEN, -1)
+    curses.init_pair(3, curses.COLOR_YELLOW, -1)
+    curses.init_pair(4, curses.COLOR_MAGENTA, -1)
+    curses.init_pair(5, curses.COLOR_RED, -1)
+
+    frame = 0
     glyphs = ['█', '▓', '▒', '░', '●', '•']
+
     while True:
         with shared.lock:
             running = shared.running
@@ -369,6 +638,7 @@ def _visual_loop_curses(stdscr, shared: SharedState):
             gen = shared.generation
             best_hd = shared.best_hd
             tgt = shared.target_hex
+            private_key = shared.private_key  # NEW: Get private key status
 
         if not running:
             break
@@ -376,12 +646,17 @@ def _visual_loop_curses(stdscr, shared: SharedState):
         stdscr.erase()
         h, w = stdscr.getmaxyx()
 
-        # Header
-        title = "SENTINEL_OF_VOID — Live Convergence Braid"
-        info  = f"Gen: {gen:>6}   Best HD: {best_hd if best_hd is not None else '-':>3}   Target: {tgt[-16:]}"
+        # ENHANCED HEADER WITH PRIVATE KEY STATUS
+        title = "SENTINEL_OF_VOID — SECP256K1 PRIVATE KEY EXTRACTION"
+        info = f"Gen: {gen:>6} | Best HD: {best_hd if best_hd is not None else '-':>3}"
+        
+        if private_key:
+            pk_display = f" | PRIVATE KEY FOUND: {private_key:064x}"[:w-50]
+            info += pk_display
+
         try:
-            stdscr.addstr(0, max(0, (w-len(title))//2), title)
-            stdscr.addstr(1, max(0, (w-len(info))//2),  info)
+            stdscr.addstr(0, max(0, (w-len(title))//2), title, curses.A_BOLD)
+            stdscr.addstr(1, max(0, (w-len(info))//2), info)
         except:
             pass
 
@@ -393,6 +668,7 @@ def _visual_loop_curses(stdscr, shared: SharedState):
         # normalize counts for brightness selection
         counts = [c for _, c in strands] or [1]
         cmin, cmax = min(counts), max(counts)
+
         def pick_glyph(idx, c):
             if cmax == cmin:
                 level = 0
@@ -400,21 +676,35 @@ def _visual_loop_curses(stdscr, shared: SharedState):
                 level = int((c - cmin) / (cmax - cmin) * (len(glyphs)-1))
             return glyphs[min(len(glyphs)-1, max(0, level)) if idx < len(glyphs) else -1]
 
+        target_bytes = bytes.fromhex(shared.target_hex)
+
         # Draw strands
         for i in range(strand_length):
             for j, (phrase, cnt) in enumerate(strands):
-                # angular phase is derived from frame, row offset, and strand index
                 angle = (frame*0.12 + i*0.35 + j * (2*math.pi/num_strands)) % (2*math.pi)
                 x = int(w//2 + radius * math.cos(angle))
                 y = int(h//2 + radius * math.sin(angle) - strand_length//2 + i)
                 if 0 <= y < h and 0 <= x < w:
                     ch = pick_glyph(j, cnt)
                     try:
-                        stdscr.addch(y, x, ch)
+                        pred_byte = j & 0xFF
+                        target_byte = target_bytes[j % len(target_bytes)]
+                        matches = 8 - bin(pred_byte ^ target_byte).count("1")
+                        if matches == 8:
+                            color_id = 1  # LightBlue
+                        elif matches >= 6:
+                            color_id = 2  # Green
+                        elif matches >= 3:
+                            color_id = 3  # Yellow
+                        elif matches >= 1:
+                            color_id = 5  # Orange
+                        else:
+                            color_id = 4  # Pink
+                        stdscr.addstr(y, x, ch, curses.color_pair(color_id))
                     except:
                         pass
 
-        # Legend of phrases:
+        # Legend of phrases
         for idx, (p, c) in enumerate(strands[:min(3, h-3)]):
             line = f"[{idx+1}] {p[:max(8, w-20)]}  ×{c}"
             try:
@@ -424,7 +714,6 @@ def _visual_loop_curses(stdscr, shared: SharedState):
 
         stdscr.refresh()
 
-        # Exit on key press
         try:
             if stdscr.getch() != -1:
                 with shared.lock:
@@ -458,8 +747,8 @@ def run_evolution_with_visual(shared: SharedState):
     random.seed()
 
     logln("-"*80)
-    logln("  SENTINEL_OF_VOID_MERGED_VISUAL (v31.0)")
-    logln("  Evolving via GA + composite consensus + bitflux guidance + live braid")
+    logln("  SENTINEL_OF_VOID_MERGED_VISUAL (v32.0 - WITH PRIVATE KEY EXTRACTION)")
+    logln("  Now evolving towards SECP256K1 private key discovery via Void Dictionary")
     logln("-"*80)
 
     pk_hex = TARGET_DATA["pubkey_hex"]
@@ -471,21 +760,24 @@ def run_evolution_with_visual(shared: SharedState):
     analyzer = MultiDeltaAnalyzer(dict_eng)
     population = [GeneticSolver(generation=0) for _ in range(POPULATION_SIZE)]
 
-    # initial update to shared
+    # NEW: Private key extraction tracking
+    private_key_found = None
+    extraction_attempts = 0
+
     shared.update(0, None, v_error_target, [])
 
     for gen in range(GENERATIONS):
-        # fitness
+        # FITNESS EVALUATION
         for s in population:
             s.calculate_fitness(v_error_target)
 
-        # survivor aging & proven record
+        # SURVIVOR PROCESSING
         population.sort(key=lambda x: x.fitness)
         survivors = population[:max(1, int(POPULATION_SIZE*SURVIVAL_RATE))]
         for s in survivors:
             dict_eng.record_survivor(s)
 
-        # stagnation tracking
+        # STAGNATION TRACKING
         best = population[0]
         best_hd = best.fitness
         if best_hd < previous_best_hamming_distance:
@@ -498,16 +790,53 @@ def run_evolution_with_visual(shared: SharedState):
                 generational_delta_repository.append(best.predicted_delta)
                 stagnation_counter = 0
 
-        # analyze language & composites
+        # VOID DICTIONARY ANALYSIS
         dict_eng.analyze(population)
         analyzer.analyze()
 
-        # live visual feed: top phrases for TOP_PHRASES_LEN
+        # VISUAL UPDATE
         bucket = f"phrases_{TOP_PHRASES_LEN}"
-        top_phrases = dict_eng.cumulative[bucket].most_common(8)  # take more; visual will slice to BRAID_STRANDS
+        top_phrases = dict_eng.cumulative[bucket].most_common(16)
         shared.update(gen, best_hd, v_error_target, top_phrases)
 
-        # comparator halt (consensus match)
+        # NEW: PERIODIC PRIVATE KEY EXTRACTION ATTEMPTS
+        if gen % 100 == 0 and gen > 0:  # Try every 100 generations
+            extraction_attempts += 1
+            logln(f"\n--- Private Key Extraction Attempt {extraction_attempts} (Gen {gen}) ---")
+            
+            private_key_candidate = void_dict_to_private_key(dict_eng, pk_hex, max_attempts=50)
+            
+            if private_key_candidate:
+                logln("🎯 POTENTIAL PRIVATE KEY CANDIDATE FOUND!")
+                logln(f"   Candidate: {private_key_candidate:064x}")
+                
+                # Verify it produces the correct public key
+                if validate_private_key(private_key_candidate, pk_hex, CURVE_ORDER):
+                    private_key_found = private_key_candidate
+                    logln("💫 VERIFICATION SUCCESSFUL! PRIVATE KEY CONFIRMED!")
+                    logln(f"   Private Key: {private_key_found:064x}")
+                    
+                    with shared.lock:
+                        shared.converged = True
+                        shared.private_key = private_key_found
+                        shared.running = False
+                    
+                    # Log the breakthrough
+                    logln("\n" + "="*80)
+                    logln("  BREAKTHROUGH: SECP256K1 PRIVATE KEY EXTRACTED")
+                    logln("  Via Void Dictionary Pattern Recognition")
+                    logln(f"  Generation: {gen}")
+                    logln(f"  Public Key: {pk_hex}")
+                    logln(f"  Private Key: {private_key_found:064x}")
+                    logln("="*80)
+                    
+                    return private_key_found
+                else:
+                    logln("   Verification failed - continuing search...")
+            else:
+                logln("   No valid candidate found this attempt")
+
+        # CONVERGENCE CHECKS (original logic)
         proven_delta = analyzer.composite_deltas.get("Proven Mutations", 0)
         if proven_delta and hamming_distance(proven_delta, v_error_target) == 0:
             logln("\n" + "="*80)
@@ -517,9 +846,8 @@ def run_evolution_with_visual(shared: SharedState):
             with shared.lock:
                 shared.converged = True
                 shared.running = False
-            return
+            return None
 
-        # individual perfect found
         if best_hd == 0:
             logln("\n" + "="*80)
             logln("  EVOLUTIONARY SUCCESS: Perfect individual delta found.")
@@ -530,40 +858,64 @@ def run_evolution_with_visual(shared: SharedState):
             with shared.lock:
                 shared.converged = True
                 shared.running = False
-            return
+            return None
 
-        # periodic buffered reporting
+        # PERIODIC REPORTING
         if gen % REPORT_INTERVAL == 0:
             display_report(gen, population, v_error_target, k_pred, analyzer, dict_eng)
             print_dictionary_snapshot(gen, dict_eng, f"{best.predicted_delta:064x}", v_error_target)
 
-        # evolve
+        # EVOLVE POPULATION
         population = evolve_population(population, gen + 1)
 
-    # if loop ends
+    # FINAL EXTRACTION ATTEMPT IF NOT ALREADY DONE
+    if not private_key_found:
+        logln("\n--- Final Private Key Extraction Attempt ---")
+        private_key_found = void_dict_to_private_key(dict_eng, pk_hex, max_attempts=200)
+        if private_key_found and validate_private_key(private_key_found, pk_hex, CURVE_ORDER):
+            logln("💫 FINAL ATTEMPTS SUCCESSFUL! PRIVATE KEY FOUND!")
+            logln(f"   Private Key: {private_key_found:064x}")
+
     display_report(GENERATIONS, population, v_error_target, k_pred, analyzer, dict_eng)
     with shared.lock:
         shared.running = False
+    
+    return private_key_found
 
 # ============================== ENTRYPOINT ===================================
 
 def main():
     shared = SharedState()
 
-    # Start evolution in a worker thread
+    logln("🚀 INITIALIZING ENHANCED SOLVER WITH PRIVATE KEY EXTRACTION")
+    logln(f"🔑 TARGET PUBLIC KEY: {TARGET_DATA['pubkey_hex']}")
+    logln("🌌 MASTER ALGORITHM INTEGRATION: ACTIVE")
+
     evo_thread = threading.Thread(target=run_evolution_with_visual, args=(shared,), daemon=True)
     evo_thread.start()
 
-    # Run visualization in main thread; if curses fails, we just wait for evo to complete
     visual_ok = start_visualization(shared)
 
-    # Ensure evolution completes
     evo_thread.join()
 
-    # If visualization was running, it's now stopped; flush buffered logs
     flush_logs_to_stdout()
 
-    # If visualization never showed (or user pressed a key to exit early), print a note
+    # FINAL STATUS REPORT
+    if hasattr(shared, 'private_key') and shared.private_key:
+        print("\n🎉 MISSION ACCOMPLISHED: PRIVATE KEY SUCCESSFULLY EXTRACTED!")
+        print(f"   Private Key: {shared.private_key:064x}")
+        print(f"   Public Key:  {TARGET_DATA['pubkey_hex']}")
+        
+        # Verify one more time
+        if validate_private_key(shared.private_key, TARGET_DATA['pubkey_hex'], CURVE_ORDER):
+            print("   ✅ VERIFICATION: PASSED")
+        else:
+            print("   ❌ VERIFICATION: FAILED (this shouldn't happen)")
+    else:
+        print("\n⚠️  Private key not found in this run.")
+        print("   The Void Dictionary patterns may need more generations to converge.")
+        print("   Consider increasing GENERATIONS or adjusting parameters.")
+
     if not visual_ok:
         print("\n[visualization disabled or unavailable — printed buffered report instead]")
 

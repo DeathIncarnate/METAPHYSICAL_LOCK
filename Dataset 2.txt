@@ -1,0 +1,972 @@
+================================================================================
+  Generation 2000 progressing... |
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2000 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9439983 occurrences
+    - '2': 642823 occurrences
+    - '8': 450042 occurrences
+    - '3': 378711 occurrences
+    - '1': 329655 occurrences
+    - '4': 318436 occurrences
+    - 'a': 316115 occurrences
+    - 'c': 192008 occurrences
+    - '6': 175659 occurrences
+    - '7': 134643 occurrences
+    - 'e': 101410 occurrences
+    - 'd': 95492 occurrences
+    - '9': 92872 occurrences
+    - '5': 70125 occurrences
+    - 'b': 39726 occurrences
+    - 'f': 28700 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 165655 occurrences
+    - '8': 151965 occurrences
+    - '36': 42904 occurrences
+    - 'c': 38489 occurrences
+    - '321d': 30394 occurrences
+    - '4': 28530 occurrences
+    - '71': 27303 occurrences
+    - '46': 23667 occurrences
+    - '1': 23114 occurrences
+    - '3': 21473 occurrences
+    - 'e': 17857 occurrences
+    - '7': 15418 occurrences
+    - '233': 15300 occurrences
+    - '44': 14601 occurrences
+    - '51': 13611 occurrences
+    - '22': 13227 occurrences
+    - '1d': 12927 occurrences
+    - 'a31': 12008 occurrences
+    - '1dc': 9578 occurrences
+    - '72': 9238 occurrences
+    - 'ca272a': 8698 occurrences
+    - '4c': 8374 occurrences
+    - '28': 7675 occurrences
+    - '249a1426': 7503 occurrences
+    - 'a33': 6786 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 46170 occurrences
+    - '2_2': 42031 occurrences
+    - '8_8': 33750 occurrences
+    - '8_2': 22188 occurrences
+    - '8_36': 20239 occurrences
+    - '71_321d': 15093 occurrences
+    - '2_4': 12688 occurrences
+    - '3_1d': 12366 occurrences
+    - '4_2': 11761 occurrences
+    - '1_8': 9356 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 13905 occurrences
+    - '2_2_8': 12624 occurrences
+    - '2_8_2': 10839 occurrences
+    - '2_2_2': 7521 occurrences
+    - '8_2_8': 7493 occurrences
+    - '4_2_8': 6779 occurrences
+    - '8_8_8': 6562 occurrences
+    - '71_3_1d': 6130 occurrences
+    - '233_8_36': 5279 occurrences
+    - '2_4_2': 5134 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 3939 occurrences
+    - '2_2_8_8': 3920 occurrences
+    - '2_4_2_8': 3427 occurrences
+    - '4_2_8_8': 3135 occurrences
+    - '2_8_8_8': 3095 occurrences
+    - '2_2_8_2': 3049 occurrences
+    - '321d_a31_8_36': 2879 occurrences
+    - '321d_233_8_36': 2442 occurrences
+    - '2_8_8_2': 2329 occurrences
+    - '2_2_4c_2': 2095 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1918 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1918 occurrences
+    - 'd1_b21d_233_8_34': 1918 occurrences
+    - '2_4_2_8_8': 1876 occurrences
+    - '3_1d_233_8_36': 1564 occurrences
+    - '2_2_4_2_8': 1404 occurrences
+    - '71_321d_231_8_36': 1348 occurrences
+    - '2_2_8_2_8': 1338 occurrences
+    - '71_321d_a31_8_36': 1216 occurrences
+    - '71_321d_233_8_36': 1191 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1918 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1918 occurrences
+    - '2_2_4_2_8_8': 793 occurrences
+    - '71_3_1d_a33_8_36': 730 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 715 occurrences
+    - '2_2_4c_2_2_8': 673 occurrences
+    - '2_4_2_8_8_8': 663 occurrences
+    - '51_3_1d_233_8_36': 650 occurrences
+    - '2_2_44_3_8_8': 561 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 529 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1918 occurrences
+    - '2_2_8_4_2_2_8': 429 occurrences
+    - '2_2_8_4_2_8_2': 395 occurrences
+    - '2_2_22_8_4_2_2': 385 occurrences
+    - '2_2_2_844_3_2_8': 371 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 303 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 301 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 285 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 282 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 278 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 187 occurrences
+    - '2_8_4_2_8_2_8_2': 180 occurrences
+    - '2_8_4_2_2_8_8_82': 175 occurrences
+    - '2_2_8_4_2_2_8_82': 170 occurrences
+    - '2_2_8_4_2_8_2_8': 170 occurrences
+    - '2_2_8_4_2_2_8_8': 164 occurrences
+    - '2_2_2_844_3_2_8_8': 157 occurrences
+    - '2_2_844_3_2_8_8_2': 157 occurrences
+    - '2_22_8_4_2_2_8_2': 151 occurrences
+    - '2_2_2_844_3_2_8_2': 150 occurrences
+================================================================================
+  Generation 2010 progressing... -
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2010 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9487507 occurrences
+    - '2': 646016 occurrences
+    - '8': 452238 occurrences
+    - '3': 380646 occurrences
+    - '1': 331262 occurrences
+    - '4': 319985 occurrences
+    - 'a': 317694 occurrences
+    - 'c': 192915 occurrences
+    - '6': 176552 occurrences
+    - '7': 135306 occurrences
+    - 'e': 101899 occurrences
+    - 'd': 95954 occurrences
+    - '9': 93302 occurrences
+    - '5': 70449 occurrences
+    - 'b': 39867 occurrences
+    - 'f': 28808 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 166526 occurrences
+    - '8': 152743 occurrences
+    - '36': 43131 occurrences
+    - 'c': 38692 occurrences
+    - '321d': 30557 occurrences
+    - '4': 28655 occurrences
+    - '71': 27457 occurrences
+    - '46': 23787 occurrences
+    - '1': 23209 occurrences
+    - '3': 21580 occurrences
+    - 'e': 17946 occurrences
+    - '7': 15493 occurrences
+    - '233': 15374 occurrences
+    - '44': 14682 occurrences
+    - '51': 13670 occurrences
+    - '22': 13282 occurrences
+    - '1d': 12992 occurrences
+    - 'a31': 12070 occurrences
+    - '1dc': 9636 occurrences
+    - '72': 9283 occurrences
+    - 'ca272a': 8740 occurrences
+    - '4c': 8422 occurrences
+    - '28': 7719 occurrences
+    - '249a1426': 7543 occurrences
+    - 'a33': 6820 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 46423 occurrences
+    - '2_2': 42250 occurrences
+    - '8_8': 33929 occurrences
+    - '8_2': 22314 occurrences
+    - '8_36': 20348 occurrences
+    - '71_321d': 15179 occurrences
+    - '2_4': 12745 occurrences
+    - '3_1d': 12425 occurrences
+    - '4_2': 11815 occurrences
+    - '1_8': 9401 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 13992 occurrences
+    - '2_2_8': 12692 occurrences
+    - '2_8_2': 10902 occurrences
+    - '2_2_2': 7557 occurrences
+    - '8_2_8': 7536 occurrences
+    - '4_2_8': 6809 occurrences
+    - '8_8_8': 6595 occurrences
+    - '71_3_1d': 6158 occurrences
+    - '233_8_36': 5309 occurrences
+    - '2_4_2': 5159 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 3965 occurrences
+    - '2_2_8_8': 3950 occurrences
+    - '2_4_2_8': 3445 occurrences
+    - '4_2_8_8': 3147 occurrences
+    - '2_8_8_8': 3113 occurrences
+    - '2_2_8_2': 3064 occurrences
+    - '321d_a31_8_36': 2895 occurrences
+    - '321d_233_8_36': 2458 occurrences
+    - '2_8_8_2': 2347 occurrences
+    - '2_2_4c_2': 2111 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1928 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1928 occurrences
+    - 'd1_b21d_233_8_34': 1928 occurrences
+    - '2_4_2_8_8': 1883 occurrences
+    - '3_1d_233_8_36': 1571 occurrences
+    - '2_2_4_2_8': 1411 occurrences
+    - '71_321d_231_8_36': 1357 occurrences
+    - '2_2_8_2_8': 1344 occurrences
+    - '71_321d_a31_8_36': 1222 occurrences
+    - '71_321d_233_8_36': 1200 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1928 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1928 occurrences
+    - '2_2_4_2_8_8': 795 occurrences
+    - '71_3_1d_a33_8_36': 735 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 721 occurrences
+    - '2_2_4c_2_2_8': 678 occurrences
+    - '2_4_2_8_8_8': 665 occurrences
+    - '51_3_1d_233_8_36': 653 occurrences
+    - '2_2_44_3_8_8': 565 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 534 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1928 occurrences
+    - '2_2_8_4_2_2_8': 429 occurrences
+    - '2_2_8_4_2_8_2': 395 occurrences
+    - '2_2_22_8_4_2_2': 388 occurrences
+    - '2_2_2_844_3_2_8': 375 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 304 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 303 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 288 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 285 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 279 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 189 occurrences
+    - '2_8_4_2_8_2_8_2': 180 occurrences
+    - '2_8_4_2_2_8_8_82': 176 occurrences
+    - '2_2_8_4_2_2_8_82': 170 occurrences
+    - '2_2_8_4_2_8_2_8': 170 occurrences
+    - '2_2_8_4_2_2_8_8': 164 occurrences
+    - '2_2_2_844_3_2_8_8': 159 occurrences
+    - '2_2_844_3_2_8_8_2': 159 occurrences
+    - '2_22_8_4_2_2_8_2': 152 occurrences
+    - '2_2_2_844_3_2_8_2': 151 occurrences
+================================================================================
+  Generation 2020 progressing... |
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2020 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9534940 occurrences
+    - '2': 649194 occurrences
+    - '8': 454472 occurrences
+    - '3': 382647 occurrences
+    - '1': 332899 occurrences
+    - '4': 321487 occurrences
+    - 'a': 319254 occurrences
+    - 'c': 193836 occurrences
+    - '6': 177471 occurrences
+    - '7': 135961 occurrences
+    - 'e': 102395 occurrences
+    - 'd': 96427 occurrences
+    - '9': 93722 occurrences
+    - '5': 70760 occurrences
+    - 'b': 40019 occurrences
+    - 'f': 28916 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 167371 occurrences
+    - '8': 153524 occurrences
+    - '36': 43374 occurrences
+    - 'c': 38893 occurrences
+    - '321d': 30712 occurrences
+    - '4': 28786 occurrences
+    - '71': 27611 occurrences
+    - '46': 23908 occurrences
+    - '1': 23304 occurrences
+    - '3': 21712 occurrences
+    - 'e': 18046 occurrences
+    - '7': 15564 occurrences
+    - '233': 15461 occurrences
+    - '44': 14752 occurrences
+    - '51': 13751 occurrences
+    - '22': 13355 occurrences
+    - '1d': 13076 occurrences
+    - 'a31': 12124 occurrences
+    - '1dc': 9686 occurrences
+    - '72': 9325 occurrences
+    - 'ca272a': 8781 occurrences
+    - '4c': 8461 occurrences
+    - '28': 7754 occurrences
+    - '249a1426': 7583 occurrences
+    - 'a33': 6863 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 46690 occurrences
+    - '2_2': 42463 occurrences
+    - '8_8': 34085 occurrences
+    - '8_2': 22441 occurrences
+    - '8_36': 20456 occurrences
+    - '71_321d': 15255 occurrences
+    - '2_4': 12805 occurrences
+    - '3_1d': 12508 occurrences
+    - '4_2': 11868 occurrences
+    - '1_8': 9450 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 14059 occurrences
+    - '2_2_8': 12773 occurrences
+    - '2_8_2': 10974 occurrences
+    - '2_2_2': 7593 occurrences
+    - '8_2_8': 7584 occurrences
+    - '4_2_8': 6843 occurrences
+    - '8_8_8': 6620 occurrences
+    - '71_3_1d': 6201 occurrences
+    - '233_8_36': 5339 occurrences
+    - '2_4_2': 5177 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 3993 occurrences
+    - '2_2_8_8': 3968 occurrences
+    - '2_4_2_8': 3457 occurrences
+    - '4_2_8_8': 3160 occurrences
+    - '2_8_8_8': 3129 occurrences
+    - '2_2_8_2': 3087 occurrences
+    - '321d_a31_8_36': 2909 occurrences
+    - '321d_233_8_36': 2472 occurrences
+    - '2_8_8_2': 2358 occurrences
+    - '2_2_4c_2': 2125 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1938 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1938 occurrences
+    - 'd1_b21d_233_8_34': 1938 occurrences
+    - '2_4_2_8_8': 1890 occurrences
+    - '3_1d_233_8_36': 1581 occurrences
+    - '2_2_4_2_8': 1414 occurrences
+    - '71_321d_231_8_36': 1364 occurrences
+    - '2_2_8_2_8': 1357 occurrences
+    - '71_321d_a31_8_36': 1229 occurrences
+    - '71_321d_233_8_36': 1202 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1938 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1938 occurrences
+    - '2_2_4_2_8_8': 796 occurrences
+    - '71_3_1d_a33_8_36': 742 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 724 occurrences
+    - '2_2_4c_2_2_8': 685 occurrences
+    - '2_4_2_8_8_8': 667 occurrences
+    - '51_3_1d_233_8_36': 657 occurrences
+    - '2_2_44_3_8_8': 567 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 539 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1938 occurrences
+    - '2_2_8_4_2_2_8': 431 occurrences
+    - '2_2_8_4_2_8_2': 397 occurrences
+    - '2_2_22_8_4_2_2': 389 occurrences
+    - '2_2_2_844_3_2_8': 378 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 305 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 304 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 290 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 286 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 282 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 189 occurrences
+    - '2_8_4_2_8_2_8_2': 180 occurrences
+    - '2_8_4_2_2_8_8_82': 177 occurrences
+    - '2_2_8_4_2_2_8_82': 172 occurrences
+    - '2_2_8_4_2_8_2_8': 170 occurrences
+    - '2_2_8_4_2_2_8_8': 164 occurrences
+    - '2_2_2_844_3_2_8_8': 160 occurrences
+    - '2_2_844_3_2_8_8_2': 160 occurrences
+    - '2_22_8_4_2_2_8_2': 153 occurrences
+    - '2_2_2_844_3_2_8_2': 153 occurrences
+================================================================================
+  Generation 2030 progressing... -
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2030 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9582197 occurrences
+    - '2': 652392 occurrences
+    - '8': 456746 occurrences
+    - '3': 384616 occurrences
+    - '1': 334532 occurrences
+    - '4': 323059 occurrences
+    - 'a': 320829 occurrences
+    - 'c': 194765 occurrences
+    - '6': 178383 occurrences
+    - '7': 136653 occurrences
+    - 'e': 102885 occurrences
+    - 'd': 96905 occurrences
+    - '9': 94161 occurrences
+    - '5': 71073 occurrences
+    - 'b': 40178 occurrences
+    - 'f': 29026 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 168227 occurrences
+    - '8': 154323 occurrences
+    - '36': 43610 occurrences
+    - 'c': 39081 occurrences
+    - '321d': 30882 occurrences
+    - '4': 28924 occurrences
+    - '71': 27769 occurrences
+    - '46': 24028 occurrences
+    - '1': 23397 occurrences
+    - '3': 21829 occurrences
+    - 'e': 18151 occurrences
+    - '7': 15634 occurrences
+    - '233': 15540 occurrences
+    - '44': 14837 occurrences
+    - '51': 13808 occurrences
+    - '22': 13414 occurrences
+    - '1d': 13141 occurrences
+    - 'a31': 12185 occurrences
+    - '1dc': 9741 occurrences
+    - '72': 9372 occurrences
+    - 'ca272a': 8822 occurrences
+    - '4c': 8504 occurrences
+    - '28': 7807 occurrences
+    - '249a1426': 7623 occurrences
+    - 'a33': 6907 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 46938 occurrences
+    - '2_2': 42673 occurrences
+    - '8_8': 34267 occurrences
+    - '8_2': 22559 occurrences
+    - '8_36': 20567 occurrences
+    - '71_321d': 15346 occurrences
+    - '2_4': 12881 occurrences
+    - '3_1d': 12570 occurrences
+    - '4_2': 11925 occurrences
+    - '1_8': 9497 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 14135 occurrences
+    - '2_2_8': 12839 occurrences
+    - '2_8_2': 11035 occurrences
+    - '8_2_8': 7629 occurrences
+    - '2_2_2': 7622 occurrences
+    - '4_2_8': 6878 occurrences
+    - '8_8_8': 6646 occurrences
+    - '71_3_1d': 6233 occurrences
+    - '233_8_36': 5364 occurrences
+    - '2_4_2': 5210 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 4017 occurrences
+    - '2_2_8_8': 3988 occurrences
+    - '2_4_2_8': 3478 occurrences
+    - '4_2_8_8': 3177 occurrences
+    - '2_8_8_8': 3142 occurrences
+    - '2_2_8_2': 3107 occurrences
+    - '321d_a31_8_36': 2922 occurrences
+    - '321d_233_8_36': 2484 occurrences
+    - '2_8_8_2': 2374 occurrences
+    - '2_2_4c_2': 2133 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1948 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1948 occurrences
+    - 'd1_b21d_233_8_34': 1948 occurrences
+    - '2_4_2_8_8': 1902 occurrences
+    - '3_1d_233_8_36': 1590 occurrences
+    - '2_2_4_2_8': 1424 occurrences
+    - '71_321d_231_8_36': 1366 occurrences
+    - '2_2_8_2_8': 1363 occurrences
+    - '71_321d_a31_8_36': 1233 occurrences
+    - '71_321d_233_8_36': 1208 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1948 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1948 occurrences
+    - '2_2_4_2_8_8': 802 occurrences
+    - '71_3_1d_a33_8_36': 744 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 727 occurrences
+    - '2_2_4c_2_2_8': 688 occurrences
+    - '2_4_2_8_8_8': 669 occurrences
+    - '51_3_1d_233_8_36': 660 occurrences
+    - '2_2_44_3_8_8': 573 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 541 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1948 occurrences
+    - '2_2_8_4_2_2_8': 432 occurrences
+    - '2_2_8_4_2_8_2': 399 occurrences
+    - '2_2_22_8_4_2_2': 390 occurrences
+    - '2_2_2_844_3_2_8': 379 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 306 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 305 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 291 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 287 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 283 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 190 occurrences
+    - '2_8_4_2_8_2_8_2': 181 occurrences
+    - '2_8_4_2_2_8_8_82': 177 occurrences
+    - '2_2_8_4_2_2_8_82': 173 occurrences
+    - '2_2_8_4_2_8_2_8': 171 occurrences
+    - '2_2_8_4_2_2_8_8': 164 occurrences
+    - '2_2_2_844_3_2_8_8': 161 occurrences
+    - '2_2_844_3_2_8_8_2': 161 occurrences
+    - '2_22_8_4_2_2_8_2': 154 occurrences
+    - '2_2_2_844_3_2_8_2': 153 occurrences
+================================================================================
+  Generation 2040 progressing... |
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2040 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9629478 occurrences
+    - '2': 655604 occurrences
+    - '8': 458975 occurrences
+    - '3': 386572 occurrences
+    - '1': 336175 occurrences
+    - '4': 324613 occurrences
+    - 'a': 322419 occurrences
+    - 'c': 195711 occurrences
+    - '6': 179270 occurrences
+    - '7': 137312 occurrences
+    - 'e': 103388 occurrences
+    - 'd': 97385 occurrences
+    - '9': 94590 occurrences
+    - '5': 71409 occurrences
+    - 'b': 40354 occurrences
+    - 'f': 29145 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 169033 occurrences
+    - '8': 155074 occurrences
+    - '36': 43816 occurrences
+    - 'c': 39301 occurrences
+    - '321d': 31052 occurrences
+    - '4': 29091 occurrences
+    - '71': 27920 occurrences
+    - '46': 24148 occurrences
+    - '1': 23476 occurrences
+    - '3': 21936 occurrences
+    - 'e': 18229 occurrences
+    - '7': 15711 occurrences
+    - '233': 15618 occurrences
+    - '44': 14906 occurrences
+    - '51': 13883 occurrences
+    - '22': 13492 occurrences
+    - '1d': 13206 occurrences
+    - 'a31': 12254 occurrences
+    - '1dc': 9799 occurrences
+    - '72': 9419 occurrences
+    - 'ca272a': 8866 occurrences
+    - '4c': 8550 occurrences
+    - '28': 7857 occurrences
+    - '249a1426': 7663 occurrences
+    - 'a33': 6945 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 47166 occurrences
+    - '2_2': 42888 occurrences
+    - '8_8': 34426 occurrences
+    - '8_2': 22646 occurrences
+    - '8_36': 20670 occurrences
+    - '71_321d': 15434 occurrences
+    - '2_4': 12944 occurrences
+    - '3_1d': 12631 occurrences
+    - '4_2': 12003 occurrences
+    - '1_8': 9532 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 14200 occurrences
+    - '2_2_8': 12909 occurrences
+    - '2_8_2': 11080 occurrences
+    - '8_2_8': 7663 occurrences
+    - '2_2_2': 7657 occurrences
+    - '4_2_8': 6919 occurrences
+    - '8_8_8': 6674 occurrences
+    - '71_3_1d': 6261 occurrences
+    - '233_8_36': 5387 occurrences
+    - '2_4_2': 5236 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 4033 occurrences
+    - '2_2_8_8': 4007 occurrences
+    - '2_4_2_8': 3498 occurrences
+    - '4_2_8_8': 3202 occurrences
+    - '2_8_8_8': 3154 occurrences
+    - '2_2_8_2': 3123 occurrences
+    - '321d_a31_8_36': 2942 occurrences
+    - '321d_233_8_36': 2496 occurrences
+    - '2_8_8_2': 2379 occurrences
+    - '2_2_4c_2': 2143 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1958 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1958 occurrences
+    - 'd1_b21d_233_8_34': 1958 occurrences
+    - '2_4_2_8_8': 1913 occurrences
+    - '3_1d_233_8_36': 1596 occurrences
+    - '2_2_4_2_8': 1436 occurrences
+    - '71_321d_231_8_36': 1375 occurrences
+    - '2_2_8_2_8': 1370 occurrences
+    - '71_321d_a31_8_36': 1245 occurrences
+    - '71_321d_233_8_36': 1214 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1958 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1958 occurrences
+    - '2_2_4_2_8_8': 807 occurrences
+    - '71_3_1d_a33_8_36': 747 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 733 occurrences
+    - '2_2_4c_2_2_8': 689 occurrences
+    - '2_4_2_8_8_8': 671 occurrences
+    - '51_3_1d_233_8_36': 662 occurrences
+    - '2_2_44_3_8_8': 578 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 543 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1958 occurrences
+    - '2_2_8_4_2_2_8': 435 occurrences
+    - '2_2_8_4_2_8_2': 402 occurrences
+    - '2_2_22_8_4_2_2': 391 occurrences
+    - '2_2_2_844_3_2_8': 380 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 308 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 306 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 291 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 290 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 285 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 191 occurrences
+    - '2_8_4_2_8_2_8_2': 182 occurrences
+    - '2_8_4_2_2_8_8_82': 178 occurrences
+    - '2_2_8_4_2_2_8_82': 174 occurrences
+    - '2_2_8_4_2_8_2_8': 174 occurrences
+    - '2_2_8_4_2_2_8_8': 165 occurrences
+    - '2_2_2_844_3_2_8_8': 161 occurrences
+    - '2_2_844_3_2_8_8_2': 161 occurrences
+    - '2_22_8_4_2_2_8_2': 155 occurrences
+    - '2_2_2_844_3_2_8_2': 153 occurrences
+================================================================================
+  Generation 2050 progressing... -
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2050 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9676922 occurrences
+    - '2': 658807 occurrences
+    - '8': 461191 occurrences
+    - '3': 388494 occurrences
+    - '1': 337807 occurrences
+    - '4': 326182 occurrences
+    - 'a': 323973 occurrences
+    - 'c': 196629 occurrences
+    - '6': 180168 occurrences
+    - '7': 137939 occurrences
+    - 'e': 103905 occurrences
+    - 'd': 97846 occurrences
+    - '9': 95019 occurrences
+    - '5': 71752 occurrences
+    - 'b': 40511 occurrences
+    - 'f': 29255 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 169906 occurrences
+    - '8': 155863 occurrences
+    - '36': 44043 occurrences
+    - 'c': 39498 occurrences
+    - '321d': 31220 occurrences
+    - '4': 29226 occurrences
+    - '71': 28064 occurrences
+    - '46': 24268 occurrences
+    - '1': 23571 occurrences
+    - '3': 22046 occurrences
+    - 'e': 18329 occurrences
+    - '7': 15784 occurrences
+    - '233': 15690 occurrences
+    - '44': 14975 occurrences
+    - '51': 13957 occurrences
+    - '22': 13571 occurrences
+    - '1d': 13265 occurrences
+    - 'a31': 12321 occurrences
+    - '1dc': 9849 occurrences
+    - '72': 9463 occurrences
+    - 'ca272a': 8908 occurrences
+    - '4c': 8612 occurrences
+    - '28': 7895 occurrences
+    - '249a1426': 7703 occurrences
+    - 'a33': 6982 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 47405 occurrences
+    - '2_2': 43114 occurrences
+    - '8_8': 34597 occurrences
+    - '8_2': 22749 occurrences
+    - '8_36': 20780 occurrences
+    - '71_321d': 15516 occurrences
+    - '2_4': 13007 occurrences
+    - '3_1d': 12688 occurrences
+    - '4_2': 12061 occurrences
+    - '1_8': 9574 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 14281 occurrences
+    - '2_2_8': 12962 occurrences
+    - '2_8_2': 11129 occurrences
+    - '2_2_2': 7706 occurrences
+    - '8_2_8': 7699 occurrences
+    - '4_2_8': 6961 occurrences
+    - '8_8_8': 6704 occurrences
+    - '71_3_1d': 6286 occurrences
+    - '233_8_36': 5412 occurrences
+    - '2_4_2': 5260 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 4049 occurrences
+    - '2_2_8_8': 4027 occurrences
+    - '2_4_2_8': 3517 occurrences
+    - '4_2_8_8': 3221 occurrences
+    - '2_8_8_8': 3172 occurrences
+    - '2_2_8_2': 3133 occurrences
+    - '321d_a31_8_36': 2957 occurrences
+    - '321d_233_8_36': 2511 occurrences
+    - '2_8_8_2': 2389 occurrences
+    - '2_2_4c_2': 2162 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1968 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1968 occurrences
+    - 'd1_b21d_233_8_34': 1968 occurrences
+    - '2_4_2_8_8': 1920 occurrences
+    - '3_1d_233_8_36': 1602 occurrences
+    - '2_2_4_2_8': 1441 occurrences
+    - '71_321d_231_8_36': 1383 occurrences
+    - '2_2_8_2_8': 1374 occurrences
+    - '71_321d_a31_8_36': 1248 occurrences
+    - '71_321d_233_8_36': 1223 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1968 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1968 occurrences
+    - '2_2_4_2_8_8': 809 occurrences
+    - '71_3_1d_a33_8_36': 751 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 736 occurrences
+    - '2_2_4c_2_2_8': 693 occurrences
+    - '2_4_2_8_8_8': 672 occurrences
+    - '51_3_1d_233_8_36': 666 occurrences
+    - '2_2_44_3_8_8': 581 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 545 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1968 occurrences
+    - '2_2_8_4_2_2_8': 436 occurrences
+    - '2_2_8_4_2_8_2': 403 occurrences
+    - '2_2_22_8_4_2_2': 392 occurrences
+    - '2_2_2_844_3_2_8': 382 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 309 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 307 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 292 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 292 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 285 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 192 occurrences
+    - '2_8_4_2_8_2_8_2': 183 occurrences
+    - '2_8_4_2_2_8_8_82': 178 occurrences
+    - '2_2_8_4_2_8_2_8': 175 occurrences
+    - '2_2_8_4_2_2_8_82': 174 occurrences
+    - '2_2_8_4_2_2_8_8': 165 occurrences
+    - '2_2_2_844_3_2_8_8': 161 occurrences
+    - '2_2_844_3_2_8_8_2': 161 occurrences
+    - '2_22_8_4_2_2_8_2': 156 occurrences
+    - '2_2_2_844_3_2_8_2': 154 occurrences
+================================================================================
+  Generation 2060 progressing... |
+================================================================================
+  LINGUISTIC ANALYSIS: Generation 2060 Dictionary Snapshot
+================================================================================
+  Evolving Model's Delta:  00000000000000000000000000000000049a142604333368c48a200c2272a046
+  Target Delta:            00000000000000000000000000000000c498d6a72453b7e8d50b218c2370a074
+  Hamming Distance:        25
+
+  >> Top 20 Most Frequent Letters (Emergent Alphabet):
+    - '0': 9724420 occurrences
+    - '2': 662004 occurrences
+    - '8': 463422 occurrences
+    - '3': 390414 occurrences
+    - '1': 339409 occurrences
+    - '4': 327771 occurrences
+    - 'a': 325541 occurrences
+    - 'c': 197520 occurrences
+    - '6': 181067 occurrences
+    - '7': 138603 occurrences
+    - 'e': 104374 occurrences
+    - 'd': 98313 occurrences
+    - '9': 95438 occurrences
+    - '5': 72085 occurrences
+    - 'b': 40654 occurrences
+    - 'f': 29365 occurrences
+
+  >> Top 25 Most Frequent Words (Building Blocks):
+    - '2': 170754 occurrences
+    - '8': 156623 occurrences
+    - '36': 44269 occurrences
+    - 'c': 39682 occurrences
+    - '321d': 31371 occurrences
+    - '4': 29359 occurrences
+    - '71': 28210 occurrences
+    - '46': 24388 occurrences
+    - '1': 23648 occurrences
+    - '3': 22164 occurrences
+    - 'e': 18438 occurrences
+    - '7': 15861 occurrences
+    - '233': 15759 occurrences
+    - '44': 15062 occurrences
+    - '51': 14029 occurrences
+    - '22': 13643 occurrences
+    - '1d': 13342 occurrences
+    - 'a31': 12396 occurrences
+    - '1dc': 9891 occurrences
+    - '72': 9498 occurrences
+    - 'ca272a': 8951 occurrences
+    - '4c': 8651 occurrences
+    - '28': 7932 occurrences
+    - '249a1426': 7743 occurrences
+    - 'a33': 7009 occurrences
+
+  >> Top 10 Most Frequent Phrases (2 words):
+    - '2_8': 47630 occurrences
+    - '2_2': 43361 occurrences
+    - '8_8': 34788 occurrences
+    - '8_2': 22839 occurrences
+    - '8_36': 20889 occurrences
+    - '71_321d': 15593 occurrences
+    - '2_4': 13074 occurrences
+    - '3_1d': 12761 occurrences
+    - '4_2': 12117 occurrences
+    - '1_8': 9608 occurrences
+
+  >> Top 10 Most Frequent Phrases (3 words):
+    - '2_8_8': 14346 occurrences
+    - '2_2_8': 13030 occurrences
+    - '2_8_2': 11174 occurrences
+    - '2_2_2': 7751 occurrences
+    - '8_2_8': 7732 occurrences
+    - '4_2_8': 6997 occurrences
+    - '8_8_8': 6750 occurrences
+    - '71_3_1d': 6323 occurrences
+    - '233_8_36': 5433 occurrences
+    - '2_4_2': 5292 occurrences
+
+  >> Top 10 Most Frequent Phrases (4 words):
+    - '2_8_2_8': 4065 occurrences
+    - '2_2_8_8': 4048 occurrences
+    - '2_4_2_8': 3541 occurrences
+    - '4_2_8_8': 3235 occurrences
+    - '2_8_8_8': 3196 occurrences
+    - '2_2_8_2': 3151 occurrences
+    - '321d_a31_8_36': 2976 occurrences
+    - '321d_233_8_36': 2519 occurrences
+    - '2_8_8_2': 2400 occurrences
+    - '2_2_4c_2': 2168 occurrences
+
+  >> Top 10 Most Frequent Phrases (5 words):
+    - 'c_f621a818a36_d1_b21d_233': 1978 occurrences
+    - 'f621a818a36_d1_b21d_233_8': 1978 occurrences
+    - 'd1_b21d_233_8_34': 1978 occurrences
+    - '2_4_2_8_8': 1931 occurrences
+    - '3_1d_233_8_36': 1610 occurrences
+    - '2_2_4_2_8': 1452 occurrences
+    - '71_321d_231_8_36': 1390 occurrences
+    - '2_2_8_2_8': 1381 occurrences
+    - '71_321d_a31_8_36': 1260 occurrences
+    - '71_321d_233_8_36': 1227 occurrences
+
+  >> Top 10 Most Frequent Phrases (6 words):
+    - 'c_f621a818a36_d1_b21d_233_8': 1978 occurrences
+    - 'f621a818a36_d1_b21d_233_8_34': 1978 occurrences
+    - '2_2_4_2_8_8': 815 occurrences
+    - '71_3_1d_a33_8_36': 753 occurrences
+    - 'c_e6a3_81823e_71_3_1d': 738 occurrences
+    - '2_2_4c_2_2_8': 696 occurrences
+    - '2_4_2_8_8_8': 677 occurrences
+    - '51_3_1d_233_8_36': 671 occurrences
+    - '2_2_44_3_8_8': 586 occurrences
+    - 'e_c6a12818a72_51_3_1d_233': 552 occurrences
+
+  >> Top 10 Most Frequent Phrases (7 words):
+    - 'c_f621a818a36_d1_b21d_233_8_34': 1978 occurrences
+    - '2_2_8_4_2_2_8': 436 occurrences
+    - '2_2_8_4_2_8_2': 404 occurrences
+    - '2_2_22_8_4_2_2': 394 occurrences
+    - '2_2_2_844_3_2_8': 387 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a31': 310 occurrences
+    - 'c_e6a3_81821a_71_3_1d_a31': 308 occurrences
+    - 'c_e6a1_81823e_71_3_1d_233': 293 occurrences
+    - 'c_e6a3_81823e_71_3_1d_a13': 293 occurrences
+    - 'c_e6a3_818a3e_71_3_1d_233': 288 occurrences
+
+  >> Top 10 Most Frequent Phrases (8 words):
+    - 'e_c6a12818a72_51_3_1d_233_8_36': 195 occurrences
+    - '2_8_4_2_8_2_8_2': 183 occurrences
+    - '2_8_4_2_2_8_8_82': 178 occurrences
+    - '2_2_8_4_2_8_2_8': 175 occurrences
+    - '2_2_8_4_2_2_8_82': 174 occurrences
+    - '2_2_8_4_2_2_8_8': 165 occurrences
+    - '2_2_2_844_3_2_8_8': 163 occurrences
+    - '2_2_844_3_2_8_8_2': 163 occurrences
+    - '2_22_8_4_2_2_8_2': 157 occurrences
+    - '2_2_2_844_3_2_8_2': 156 occurrences
+================================================================================
+  Generation 2064 progressing... |Traceback (most recent call last):
+  File "c:\Users\Nick\Desktop\New folder (2)\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\Test.py", line 478, in <module>
+    run_meta_evolution()
+  File "c:\Users\Nick\Desktop\New folder (2)\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\Test.py", line 413, in run_meta_evolution
+    population = evolve_population(population, population_size, true_error_delta=true_error_delta_int)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Nick\Desktop\New folder (2)\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\Test.py", line 184, in evolve_population
+    child_delta_suffix = causal_recursive_mutation(child_delta_suffix)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Nick\Desktop\New folder (2)\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\New folder\Test.py", line -1, in causal_recursive_mutation
+KeyboardInterrupt
+PS C:\Users\Nick> 

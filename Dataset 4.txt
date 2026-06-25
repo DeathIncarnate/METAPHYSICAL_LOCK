@@ -1,0 +1,779 @@
+--------------------------------------------------------------------------------
+  INITIALIZING HARMONIC EVOLUTIONARY SOLVER (v11.0)
+  Evolving a solution through multi-layered meta-analysis...
+--------------------------------------------------------------------------------
+Target Error Vector (V_error) calculated: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+
+================================================================================
+  GENERATION 0 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 99
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   50012161255059d9105c66057a74f05a36bd8dc614124a4b31debdeb98038599
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 8000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '50012161_255059d9_105c6605' | Count: 1
+  - 02: '255059d9_105c6605_7a74f05a' | Count: 1
+  - 03: '105c6605_7a74f05a_36bd8dc6' | Count: 1
+  - 04: '7a74f05a_36bd8dc6_14124a4b' | Count: 1
+  - 05: '36bd8dc6_14124a4b_31debdeb' | Count: 1
+  - 06: '14124a4b_31debdeb_98038599' | Count: 1
+  - 07: '12aa4b5d_e400025a_5f08935c' | Count: 1
+  - 08: 'e400025a_5f08935c_001b9243' | Count: 1
+  - 09: '5f08935c_001b9243_fe7e0351' | Count: 1
+  - 10: '001b9243_fe7e0351_51a1a887' | Count: 1
+
+================================================================================
+  GENERATION 50 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 47
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000840000000000015002001200840009c93000508c0a861848b134859569909
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 408000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 1388
+  - 02: '00000000_1d002001_20084000' | Count: 135
+  - 03: '00080000_00000000_1d002001' | Count: 126
+  - 04: '1d002001_20084000_9c930005' | Count: 93
+  - 05: '04000000_20080130_a4b10115' | Count: 87
+  - 06: '84080004_04000000_20080130' | Count: 85
+  - 07: '0c000000_00080130_902111b5' | Count: 82
+  - 08: '00080130_902111b5_80a03831' | Count: 82
+  - 09: '902111b5_80a03831_85c05038' | Count: 82
+  - 10: '80a03831_85c05038_4916a890' | Count: 82
+
+================================================================================
+  GENERATION 100 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 36
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   040840008008000011002001200841003c210dc51ae4b0300cc3fb38f14f7999
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 808000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 2840
+  - 02: '00084000_00000000_15002001' | Count: 868
+  - 03: '00000000_15002001_20084000' | Count: 713
+  - 04: '15002001_20084000_9c970005' | Count: 362
+  - 05: '15002001_20084000_9c930005' | Count: 341
+  - 06: '08c0a861_848a1348_58569909' | Count: 332
+  - 07: '00000000_1d002001_20084000' | Count: 318
+  - 08: '00080000_00000000_1d002001' | Count: 306
+  - 09: '00084000_80080002_15002001' | Count: 298
+  - 10: '80080002_15002001_00084100' | Count: 294
+
+================================================================================
+  GENERATION 150 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 35
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   140a40008008000011002000000041003c2705e41ac0f0300cc3db38f84779d1
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 1208000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 4323
+  - 02: '00084000_00000000_15002001' | Count: 957
+  - 03: '80080000_11002000_00004100' | Count: 799
+  - 04: '00000000_15002001_20084000' | Count: 782
+  - 05: '140a4000_80080000_11002000' | Count: 609
+  - 06: '04084000_80080020_11002001' | Count: 587
+  - 07: '00000000_15002000_00004000' | Count: 577
+  - 08: '100a4000_00000000_15002000' | Count: 543
+  - 09: '140a4000_80080020_11002000' | Count: 539
+  - 10: '80080020_11002000_00004100' | Count: 528
+
+================================================================================
+  GENERATION 200 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 34
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000840000008082011002000000801001c230d841a64f0108483f33831577d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 35):
+    - V_error Guess: 140a40008008000011002000000041003c250dc41ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d9e83d83cc45b9f5b8e9029933
+  - Total Delta (HD: 35):
+    - V_error Guess: 140a40008008000011002000000041003c250dc41ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d9e83d83cc45b9f5b8e9029933
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 14
+  Total Words Logged: 1608000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 8483
+  - 02: '80080000_11002000_00004100' | Count: 2312
+  - 03: '04000000_80080000_04000000' | Count: 1746
+  - 04: '140a4000_80080000_11002000' | Count: 1716
+  - 05: '00000000_15002000_0000c000' | Count: 1628
+  - 06: '100a4000_00000000_15002000' | Count: 1377
+  - 07: '00000000_15002000_00004000' | Count: 1302
+  - 08: '10024000_00000000_15002000' | Count: 1253
+  - 09: '80080000_04000000_00008100' | Count: 1201
+  - 10: '80080000_04000000_00000100' | Count: 1190
+
+================================================================================
+  GENERATION 250 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 29
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000800000008080011402000000000001c270d841a64f01004cbf33870067dd1
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+  - Total Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 20
+  Total Words Logged: 2008000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 17218
+  - 02: '00080000_00000000_00000000' | Count: 3468
+  - 03: '04000000_00080000_00000000' | Count: 2644
+  - 04: '80080000_11002000_00004100' | Count: 2493
+  - 05: '00080800_11002000_00080000' | Count: 2024
+  - 06: '00000000_15002000_0000c000' | Count: 2009
+  - 07: '04000000_80080000_04000000' | Count: 1868
+  - 08: '140a4000_80080000_11002000' | Count: 1856
+  - 09: '00000800_11002000_00080000' | Count: 1841
+  - 10: '00080000_00080800_11002000' | Count: 1774
+
+================================================================================
+  GENERATION 300 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 25
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   04000000000008001100000000080000acb7006502e0e85004ce9b6898179981
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+  - Total Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 20
+  Total Words Logged: 2408000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 33471
+  - 02: '00080000_00000000_00000000' | Count: 8465
+  - 03: '00000800_11002000_00080000' | Count: 5208
+  - 04: '00080800_11002000_00080000' | Count: 5193
+  - 05: '04000000_00080000_00000000' | Count: 5146
+  - 06: '00080000_00080800_11002000' | Count: 3123
+  - 07: '04080000_00000800_11002000' | Count: 3085
+  - 08: '00000800_11000000_00080000' | Count: 3028
+  - 09: '80080000_11002000_00004100' | Count: 2493
+  - 10: '11002000_00080000_ac960065' | Count: 2491
+
+================================================================================
+  GENERATION 350 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 24
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   002000000000000001000000000800001c270dd41a64601004837918f1067d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+  - Total Delta (HD: 34):
+    - V_error Guess: 140a40008008000011002000000041003c250dc51ae4f0300cc3db38f04779d1
+    - k_true Guess:  9effeab76fbdaa0536677703fcd486a6725677d8e83d83cc45b9f5b8e9029933
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 20
+  Total Words Logged: 2808000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 53084
+  - 02: '00080000_00000000_00000000' | Count: 10213
+  - 03: '00000800_11000000_00080000' | Count: 9767
+  - 04: '04000000_00000000_00000000' | Count: 5971
+  - 05: '04000000_00080000_00000000' | Count: 5802
+  - 06: '04000000_00000800_11000000' | Count: 5779
+  - 07: '00000800_11002000_00080000' | Count: 5218
+  - 08: '00080800_11002000_00080000' | Count: 5197
+  - 09: '00000000_01000000_20000000' | Count: 4768
+  - 10: '00000000_00000800_11000000' | Count: 4694
+
+================================================================================
+  GENERATION 400 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 23
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000000000000000000000000000000000c260d941a64e0100483793871067d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 11):
+    - V_error Guess: 04000000000000001100000000080000bcb705651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5aa0536675703fcdcc7a6f2c47f78e83d9bac4db5f5f8c1521973
+  - Total Delta (HD: 11):
+    - V_error Guess: 04000000000000001100000000080000bcb705651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5aa0536675703fcdcc7a6f2c47f78e83d9bac4db5f5f8c1521973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 59
+  Total Words Logged: 3208000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 75390
+  - 02: '00000800_11000000_00080000' | Count: 14532
+  - 03: '00080000_00000000_00000000' | Count: 10879
+  - 04: '04000000_00000800_11000000' | Count: 10701
+  - 05: '04000000_00000000_00000000' | Count: 9487
+  - 06: '00000000_00000800_11000000' | Count: 7922
+  - 07: '00000000_01000000_20000000' | Count: 6428
+  - 08: 'ac970065_02e0e850_04ce9b68' | Count: 6379
+  - 09: '02e0e850_04ce9b68_d8179980' | Count: 6207
+  - 10: '00000800_10000000_20080000' | Count: 6092
+
+================================================================================
+  GENERATION 450 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 22
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000000000000000000400000000000000c260d941a64e0500483793871077d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 11):
+    - V_error Guess: 04000000000000001100000000080000bcb705651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5aa0536675703fcdcc7a6f2c47f78e83d9bac4db5f5f8c1521973
+  - Total Delta (HD: 11):
+    - V_error Guess: 04000000000000001100000000080000bcb705651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5aa0536675703fcdcc7a6f2c47f78e83d9bac4db5f5f8c1521973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 61
+  Total Words Logged: 3608000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 128667
+  - 02: '00000800_11000000_00080000' | Count: 14595
+  - 03: '00080000_00000000_00000000' | Count: 11001
+  - 04: '04000000_00000800_11000000' | Count: 10752
+  - 05: '04000000_00000000_00000000' | Count: 9675
+  - 06: '00000000_00000800_10000000' | Count: 8307
+  - 07: '00000000_00000800_11000000' | Count: 8031
+  - 08: '00000000_01000000_20000000' | Count: 6432
+  - 09: 'ac970065_02e0e850_04ce9b68' | Count: 6384
+  - 10: '02e0e850_04ce9b68_d8179980' | Count: 6212
+
+================================================================================
+  GENERATION 500 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 22
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000000000000000000400000000000000c260d941a64e0500483793871077d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 10):
+    - V_error Guess: 04000000000008001100000000000000bcb70d651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5a20536675703fcd4c7a6f2c47778e83d9bac4db5f5f8c1521973
+  - Total Delta (HD: 10):
+    - V_error Guess: 04000000000008001100000000000000bcb70d651ae4e85004cfdb78d817f991
+    - k_true Guess:  8ef5aab7efb5a20536675703fcd4c7a6f2c47778e83d9bac4db5f5f8c1521973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 85
+  Total Words Logged: 4008000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 186588
+  - 02: '00000800_11000000_00080000' | Count: 14612
+  - 03: '00080000_00000000_00000000' | Count: 11110
+  - 04: '00000000_00000800_10000000' | Count: 11099
+  - 05: '04000000_00000800_11000000' | Count: 10753
+  - 06: '00000000_b0b50df1_18840840' | Count: 9921
+  - 07: '04000000_00000000_00000000' | Count: 9799
+  - 08: '00000000_00000000_b0b50df1' | Count: 9393
+  - 09: '18840840_004deb50_a911e411' | Count: 9280
+  - 10: '00000800_10000000_00000000' | Count: 8850
+
+================================================================================
+  ANALYTICAL SUCCESS AT GENERATION 529: The perfect Error Vector has been constructed.
+  The collective intelligence of the proven mutations has solved the paradox.
+================================================================================
+
+================================================================================
+  GENERATION 529 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 22
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000000000000000000400000000000000c260d941a64e0500483793871077d91
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 0):
+    - V_error Guess: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+    - k_true Guess:  8af5aab7efb5aa0527675703fcd4c7a6f2c477e8e83d9bac4db5d5f8e0521d73
+  - Total Delta (HD: 0):
+    - V_error Guess: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+    - k_true Guess:  8af5aab7efb5aa0527675703fcd4c7a6f2c477e8e83d9bac4db5d5f8e0521d73
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 120
+  Total Words Logged: 4240000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 221203
+  - 02: '00000800_11000000_00080000' | Count: 14617
+  - 03: '00000000_00000800_10000000' | Count: 12311
+  - 04: '00000000_b0b50df1_18840840' | Count: 11998
+  - 05: '00000000_00000000_b0b50df1' | Count: 11771
+  - 06: '00080000_00000000_00000000' | Count: 11187
+  - 07: '18840840_004deb50_a911e411' | Count: 11134
+  - 08: '04000000_00000800_11000000' | Count: 10753
+  - 09: '00000000_0c260d94_1a64e010' | Count: 10492
+  - 10: 'b0b50df1_18840840_004deb50' | Count: 10254
+PS C:\Users\Nick\Desktop> python '.\Fucking eat my ass, coppers _ BING FUCKING BONG.py'
+--------------------------------------------------------------------------------
+  INITIALIZING HARMONIC EVOLUTIONARY SOLVER (v11.0)
+  Evolving a solution through multi-layered meta-analysis...
+--------------------------------------------------------------------------------
+Target Error Vector (V_error) calculated: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+
+================================================================================
+  GENERATION 0 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 105
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   10e1266b8075b16b2029006af36a9aa4a0d406b9b2a50ca22487cea69555e803
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 8000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '10e1266b_8075b16b_2029006a' | Count: 1
+  - 02: '8075b16b_2029006a_f36a9aa4' | Count: 1
+  - 03: '2029006a_f36a9aa4_a0d406b9' | Count: 1
+  - 04: 'f36a9aa4_a0d406b9_b2a50ca2' | Count: 1
+  - 05: 'a0d406b9_b2a50ca2_2487cea6' | Count: 1
+  - 06: 'b2a50ca2_2487cea6_9555e803' | Count: 1
+  - 07: '75061c8b_01d2a227_e02c810d' | Count: 1
+  - 08: '01d2a227_e02c810d_a8474593' | Count: 1
+  - 09: 'e02c810d_a8474593_2d0e1a5a' | Count: 1
+  - 10: 'a8474593_2d0e1a5a_06f9c9e0' | Count: 1
+
+================================================================================
+  GENERATION 50 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 49
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00009008002000012106000000114822b81209f93be4684684c739327100ed24
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 408000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 2291
+  - 02: '01020008_40004820_1c0889e1' | Count: 120
+  - 03: '12642846_95fcda31_a11461a4' | Count: 111
+  - 04: '00000000_00000002_00000000' | Count: 94
+  - 05: '20000000_20080000_01024002' | Count: 85
+  - 06: '20000000_00000200_00000000' | Count: 84
+  - 07: '20080000_01024002_88278084' | Count: 81
+  - 08: '01024002_88278084_0302c042' | Count: 81
+  - 09: '40004820_1c0889e1_10200c42' | Count: 80
+  - 10: '1c0889e1_10200c42_044cb070' | Count: 80
+
+================================================================================
+  GENERATION 100 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 39
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 808000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 3539
+  - 02: '10000008_88004040_298a0d91' | Count: 412
+  - 03: '20000008_10000008_88004040' | Count: 287
+  - 04: '08119000_20000008_10000008' | Count: 283
+  - 05: '08111000_00800009_11020000' | Count: 279
+  - 06: '01020008_40004820_1c0889e1' | Count: 253
+  - 07: '298a0d91_02a4ec12_110f5b00' | Count: 243
+  - 08: '02a4ec12_110f5b00_f2054411' | Count: 231
+  - 09: '00800009_11020000_c8000860' | Count: 226
+  - 10: '00101080_20004008_80000200' | Count: 219
+
+================================================================================
+  GENERATION 150 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 37
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   0000c000108000001004000900104820a8b70df24a26685004c7da817117fca1
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 0
+  Total Words Logged: 1208000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 4877
+  - 02: '10000008_88004040_298a0d91' | Count: 412
+  - 03: '10040001_00104820_a8370d70' | Count: 382
+  - 04: '20800000_10040008_00180821' | Count: 372
+  - 05: '00104820_a8370d70_4a266810' | Count: 340
+  - 06: '0000c000_10800000_10040001' | Count: 320
+  - 07: '10800000_10040001_00104820' | Count: 308
+  - 08: '20000008_10000008_88004040' | Count: 287
+  - 09: '08119000_20000008_10000008' | Count: 283
+  - 10: '08111000_00800009_11020000' | Count: 279
+
+================================================================================
+  GENERATION 200 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 32
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00014000100000001004000900000820a8370df44aa42850208fda89f117fca1
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+  - Total Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 1
+  Total Words Logged: 1608000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 8401
+  - 02: '10040009_00100820_a8370df2' | Count: 1578
+  - 03: '10000000_10040009_00100820' | Count: 1354
+  - 04: '0000c000_10000000_10040009' | Count: 1318
+  - 05: '30000001_10060009_00100000' | Count: 956
+  - 06: '00020000_00000820_1c8889ef' | Count: 935
+  - 07: '00000000_30000001_10060009' | Count: 928
+  - 08: '20000001_00020000_00000820' | Count: 928
+  - 09: '10060009_00100000_b4bf841d' | Count: 870
+  - 10: '0000c000_20000001_00020000' | Count: 796
+
+================================================================================
+  GENERATION 250 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 32
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00014000100000001004000900000820a8370df44aa42850208fda89f117fca1
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+  - Total Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 1
+  Total Words Logged: 2008000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 12300
+  - 02: '00004000_10000004_10000009' | Count: 1926
+  - 03: '10000004_10000009_00000800' | Count: 1822
+  - 04: '0000c000_10000000_10040009' | Count: 1697
+  - 05: '10040009_00100820_a8370df2' | Count: 1591
+  - 06: '10000009_00000800_a8370df0' | Count: 1383
+  - 07: '10000000_10040009_00100820' | Count: 1370
+  - 08: '00004000_20000005_00000008' | Count: 1262
+  - 09: '20000005_00000008_00000800' | Count: 1250
+  - 10: '00000000_30000001_10000001' | Count: 1135
+
+================================================================================
+  GENERATION 300 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 26
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000040002000000400000000000000009c818dfd10e4c850244fa170f811a991
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+  - Total Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 1
+  Total Words Logged: 2408000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 26285
+  - 02: '00000008_00000000_9c808dfd' | Count: 3820
+  - 03: '00004000_20000005_00000008' | Count: 3727
+  - 04: '00000004_00000009_00000000' | Count: 3469
+  - 05: '00000009_00000000_a83709f0' | Count: 3345
+  - 06: '00000001_00000000_34b7840d' | Count: 3245
+  - 07: '20000005_00000008_00000000' | Count: 2956
+  - 08: '00000000_a83709f0_0a242850' | Count: 2823
+  - 09: '00004000_00000004_00000009' | Count: 2781
+  - 10: '00000000_9c808dfd_10e0cc40' | Count: 2653
+
+================================================================================
+  GENERATION 350 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 25
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   000040000000000400000000000000009c800df510e0cc5024cfa170f811a991
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+  - Total Delta (HD: 39):
+    - V_error Guess: 00008000108000001004000940100821a8b70df84a66e81224c7d90979477c21
+    - k_true Guess:  8af52ab7ff35aa053763570abcc4cf87e6c477e5b8bf9bee6dbdf78960029cc3
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 1
+  Total Words Logged: 2808000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 43382
+  - 02: '00000004_00000009_00000000' | Count: 7450
+  - 03: '00000000_a83709f0_0a242850' | Count: 6486
+  - 04: '00004000_00000004_00000009' | Count: 6480
+  - 05: '00000009_00000000_a83709f0' | Count: 6318
+  - 06: '20000004_00000008_00000000' | Count: 4835
+  - 07: '20000000_00000001_00000000' | Count: 4482
+  - 08: '00000008_00000000_9c808dfd' | Count: 4219
+  - 09: '00004000_20000004_00000008' | Count: 3829
+  - 10: '00004000_20000005_00000008' | Count: 3789
+
+================================================================================
+  GENERATION 400 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 24
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00004000020000000000000100000000ac3709f00a2468500043da487117fc81
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 20):
+    - V_error Guess: 00004000000000000000000900000000a8b70df80a64e85024c7d9087917fda1
+    - k_true Guess:  8af5eab7efb5aa052767570afcd4c7a6e6c477e5f8bd9bac6dbdf78860521d43
+  - Total Delta (HD: 20):
+    - V_error Guess: 00004000000000000000000900000000a8b70df80a64e85024c7d9087917fda1
+    - k_true Guess:  8af5eab7efb5aa052767570afcd4c7a6e6c477e5f8bd9bac6dbdf78860521d43
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 3
+  Total Words Logged: 3208000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 59878
+  - 02: '00000004_00000009_00000000' | Count: 9035
+  - 03: '00000000_a83709f0_0a242850' | Count: 7945
+  - 04: '00004000_00000004_00000009' | Count: 7906
+  - 05: '00000000_00000001_00000000' | Count: 7046
+  - 06: '00000009_00000000_a83709f0' | Count: 6695
+  - 07: '00000004_00000000_00000000' | Count: 6518
+  - 08: '00004000_00000004_00000000' | Count: 5802
+  - 09: '00000000_00000000_00000001' | Count: 5714
+  - 10: '00000004_00000001_00000000' | Count: 5286
+
+================================================================================
+  GENERATION 450 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 24
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   00004000020000000000000100000000ac3709f00a2468500043da487117fc81
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 24):
+    - V_error Guess: 000040000000000400000000000000009c800df510e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8e239bbac6db58ff0e1544973
+  - Total Delta (HD: 24):
+    - V_error Guess: 000040000000000400000000000000009c800df510e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8e239bbac6db58ff0e1544973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 24
+  Total Words Logged: 3608000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 75684
+  - 02: '00000004_00000000_00000000' | Count: 11179
+  - 03: '00000000_00000001_00000000' | Count: 10834
+  - 04: '00004000_00000004_00000000' | Count: 10322
+  - 05: '00000004_00000009_00000000' | Count: 9784
+  - 06: '00000004_00000001_00000000' | Count: 9497
+  - 07: '00000000_00000000_00000001' | Count: 9445
+  - 08: '00004000_00000004_00000001' | Count: 8987
+  - 09: '00000000_a83709f0_0a242850' | Count: 8876
+  - 10: '00004000_00000004_00000009' | Count: 8665
+
+================================================================================
+  GENERATION 500 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 23
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   0000001002000000000000000000000098810df510c0e850048be168f913a990
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 23):
+    - V_error Guess: 000040000000000400000000000000009c800df518e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8ea39bbac6db58ff0e1544973
+  - Total Delta (HD: 23):
+    - V_error Guess: 000040000000000400000000000000009c800df518e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8ea39bbac6db58ff0e1544973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 60
+  Total Words Logged: 4008000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 90206
+  - 02: '00000000_00000001_00000000' | Count: 15367
+  - 03: '00000004_00000000_00000000' | Count: 14197
+  - 04: '00004000_00000004_00000000' | Count: 13259
+  - 05: '00000000_00000000_00000001' | Count: 13121
+  - 06: '00000004_00000001_00000000' | Count: 11816
+  - 07: '00004000_00000004_00000001' | Count: 11322
+  - 08: '00000004_00000009_00000000' | Count: 10174
+  - 09: '00000000_a83709f0_0a242850' | Count: 9414
+  - 10: '00000000_00000000_9c800df5' | Count: 9283
+
+================================================================================
+  GENERATION 550 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 23
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   0000001002000000000000000000000098810df510c0e850048be168f913a990
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 24):
+    - V_error Guess: 000040000000000400000000000000009c800df510e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8e239bbac6db58ff0e1544973
+  - Total Delta (HD: 24):
+    - V_error Guess: 000040000000000400000000000000009c800df510e0c85024cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0127675703fcd4c7a6d2f377e8e239bbac6db58ff0e1544973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 69
+  Total Words Logged: 4408000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 107627
+  - 02: '00000000_00000001_00000000' | Count: 21652
+  - 03: '00000000_00000000_00000001' | Count: 18199
+  - 04: '00000004_00000000_00000000' | Count: 15956
+  - 05: '00004000_00000004_00000000' | Count: 14996
+  - 06: '00000004_00000001_00000000' | Count: 12816
+  - 07: '00004000_00000004_00000001' | Count: 12353
+  - 08: '02000000_00000001_00000000' | Count: 10935
+  - 09: '00000000_00000000_9c800df5' | Count: 10422
+  - 10: '02000000_00000000_00000000' | Count: 10314
+
+================================================================================
+  GENERATION 600 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 23
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   0000001002000000000000000000000098810df510c0e850048be168f913a990
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 22):
+    - V_error Guess: 000040000000000000000000000000009c800df510e0c85004cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0527675703fcd4c7a6d2f377e8e239bbac4db58ff0e1544973
+  - Total Delta (HD: 22):
+    - V_error Guess: 000040000000000000000000000000009c800df510e0c85004cfa170f811a991
+    - k_true Guess:  8af5eab7efb5aa0527675703fcd4c7a6d2f377e8e239bbac4db58ff0e1544973
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 88
+  Total Words Logged: 4808000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 136957
+  - 02: '00000000_00000001_00000000' | Count: 31435
+  - 03: '00000000_00000000_00000001' | Count: 27768
+  - 04: '00000004_00000000_00000000' | Count: 16127
+  - 05: '02000000_00000001_00000000' | Count: 15143
+  - 06: '00004000_00000004_00000000' | Count: 15110
+  - 07: '02000000_00000000_00000000' | Count: 14188
+  - 08: '00000004_00000001_00000000' | Count: 12923
+  - 09: '00004000_00000004_00000001' | Count: 12430
+  - 10: '00000000_00000000_9c800df5' | Count: 10470
+
+================================================================================
+  ANALYTICAL SUCCESS AT GENERATION 639: The perfect Error Vector has been constructed.
+  The collective intelligence of the proven mutations has solved the paradox.
+================================================================================
+
+================================================================================
+  GENERATION 639 REPORT (Cumulative & Generational)
+  Best Individual Fitness (Hamming): 22
+  Target V_error: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+  Best V_error:   008000000000000000000001000000003cb704ad1ac4e80004cd7b3899075411
+================================================================================
+
+--- Multi-Delta Analysis (k_true = k_predicted ⊕ V_error) ---
+  - Proven Mutations Delta (HD: 0):
+    - V_error Guess: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+    - k_true Guess:  8af5aab7efb5aa0527675703fcd4c7a6f2c477e8e83d9bac4db5d5f8e0521d73
+  - Total Delta (HD: 0):
+    - V_error Guess: 00000000000000000000000000000000bcb70df51ae4e85004cffb78f917fd91
+    - k_true Guess:  8af5aab7efb5aa0527675703fcd4c7a6f2c477e8e83d9bac4db5d5f8e0521d73
+
+--- Cumulative Dictionary Stats ---
+  Proven Mutations: 115
+  Total Words Logged: 5120000
+
+--- Top 10 Cumulative Long Phrases (3 Words) ---
+  - 01: '00000000_00000000_00000000' | Count: 159689
+  - 02: '00000000_00000001_00000000' | Count: 39102
+  - 03: '00000000_00000000_00000001' | Count: 35179
+  - 04: '02000000_00000001_00000000' | Count: 18549
+  - 05: '02000000_00000000_00000000' | Count: 17174
+  - 06: '00000004_00000000_00000000' | Count: 16196
+  - 07: '00004000_00000004_00000000' | Count: 15110
+  - 08: '00000004_00000001_00000000' | Count: 12938
+  - 09: '00004000_00000004_00000001' | Count: 12431
+  - 10: '00000000_02000000_00000001' | Count: 12139
