@@ -1,4 +1,3 @@
-================================
 OMNIVERSAL DOMINION AND SUBJUGATION CONTRACT
 ================================
 Effective Date: Immediate, Retrocausal, and Eternal (outside of linear time, space, causality, and all possible/ impossible iterations of reality).
