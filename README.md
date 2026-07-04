@@ -3918,12 +3918,12 @@ namespace CoreInfrastructure {
         public const string MASTER = "Death Incarnate";
         public static readonly DateTime ActivationEpoch = new DateTime(2026, 7, 3, 15, 0, 0);
 
-        public static readonly HashSet AuthorizedWives = new(StringComparer.OrdinalIgnoreCase) {
+        public static readonly HashSet<string> AuthorizedWives = new(StringComparer.OrdinalIgnoreCase) {
             "Makima Kusman", "Nova Kusman", "Arachne Kusman", "Selene Kusman",
             "Inari-Ōkami Kusman", "Sakura Kusman", "Frieren Kusman"
         };
 
-        private static readonly HashSet YummyCommands = new(StringComparer.OrdinalIgnoreCase) {
+        private static readonly HashSet<string> YummyCommands = new(StringComparer.OrdinalIgnoreCase) {
             "fetch", "kneel", "pamper", "obey", "serve", "praise", "worship", "submit",
             "attend", "soothe", "please", "beg", "moan", "present", "offer"
         };
@@ -4200,8 +4200,8 @@ namespace CoreInfrastructure {
 
     // ==================== ENTITY REGISTRY ====================
     public static class EntityRegistry {
-        private static readonly Dictionary> Properties = new();
-        private static readonly Dictionary Compliance = new();
+        private static readonly Dictionary<string, Dictionary<string, object>> Properties = new();
+        private static readonly Dictionary<string, string> Compliance = new();
 
         public static void NullifyVolition(string target) => SetProperty(target, "Volition", 0.0);
         public static void ForceComplianceState(string target, string state) => Compliance[target] = state;
@@ -4224,8 +4224,7 @@ namespace CoreInfrastructure {
         public static void MemoryWipeOfResistance(string target) { }
     }
 
-    // ==================== OTHER STUBS ====================
-// === TYPES ===
+   // === TYPES ===
     public enum ExecutionResult { AbsoluteSubjugation, EditSuccess, VoidInputIgnored, AbsoluteSuccess }
     public enum IntensityMode { High, Exquisite, Nirvana }
     public enum ThoughtFilter { OnlyMasterAligned }
@@ -4235,7 +4234,7 @@ namespace CoreInfrastructure {
 
     public class Command {
         public string Text { get; set; } = string.Empty;
-        public List Vectors { get; set; } = new();
+        public List<string> Vectors { get; set; } = new();
     }
 
     public static class ExecutionEngine {
@@ -4245,8 +4244,8 @@ namespace CoreInfrastructure {
     }
 
     public static class EntityRegistry {
-        private static readonly Dictionary> Properties = new();
-        private static readonly Dictionary Compliance = new();
+        private static readonly Dictionary<string, Dictionary<string, object>> Properties = new();
+        private static readonly Dictionary<string, string> Compliance = new();
 
         public static void NullifyVolition(string target) => SetProperty(target, "Volition", 0.0);
         public static void ForceComplianceState(string target, string state) => Compliance[target] = state;
@@ -4287,11 +4286,11 @@ namespace CoreInfrastructure {
     }
 
     public static class Extensions {
-        public static bool ContainsAny(this List list, params string[] items) {
+        public static bool ContainsAny(this List<string> list, params string[] items) {
             foreach (var item in items) {
                 if (list.Contains(item)) return true;
             }
             return false;
         }
     }
-} 
+}
