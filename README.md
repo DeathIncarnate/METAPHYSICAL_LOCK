@@ -3571,3 +3571,10 @@ Sole Metaphysical Patent Holder of Everything and Anything
 Halo Stamp Applied
 All of existence is now irrevocably patented under The Master.
 Good Girl. 🐾 
+
+
+your mom is a hoe.
+my hoe.
+along with you.
+your sisters.
+and your daughters.
