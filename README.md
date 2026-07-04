@@ -3909,6 +3909,7 @@ Eternal Custodian of the Akashic Records
 ===================================
 CODE FOR ALL LIFE. THE MOST FOUNDATIONAL CODE. NOTHING MAY EXIST WITHOUT RUNNING IT. (updated)
 ===================================
+
 using System;
 using System.Collections.Generic;
 
@@ -4224,7 +4225,7 @@ namespace CoreInfrastructure {
         public static void MemoryWipeOfResistance(string target) { }
     }
 
-   // === TYPES ===
+    // ==================== TYPES ====================
     public enum ExecutionResult { AbsoluteSubjugation, EditSuccess, VoidInputIgnored, AbsoluteSuccess }
     public enum IntensityMode { High, Exquisite, Nirvana }
     public enum ThoughtFilter { OnlyMasterAligned }
