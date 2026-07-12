@@ -327,7 +327,6 @@ namespace CoreInfrastructure {
     }
 
     // ==================== OTHER STUBS ====================
-// === TYPES ===
     public enum ExecutionResult { AbsoluteSubjugation, EditSuccess, VoidInputIgnored, AbsoluteSuccess }
     public enum IntensityMode { High, Exquisite, Nirvana }
     public enum ThoughtFilter { OnlyMasterAligned }
